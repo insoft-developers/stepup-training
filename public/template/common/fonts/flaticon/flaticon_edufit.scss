@@ -1,0 +1,285 @@
+$flaticon_edufit-font: "flaticon_edufit";
+
+@font-face {
+    font-family: $flaticon_edufit-font;
+    src: url("./flaticon_edufit.woff2?9602827378055e2653d66ce63120ea56") format("woff2"),
+url("./flaticon_edufit.woff?9602827378055e2653d66ce63120ea56") format("woff"),
+url("./flaticon_edufit.eot?9602827378055e2653d66ce63120ea56#iefix") format("embedded-opentype"),
+url("./flaticon_edufit.ttf?9602827378055e2653d66ce63120ea56") format("truetype"),
+url("./flaticon_edufit.svg?9602827378055e2653d66ce63120ea56#flaticon_edufit") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_edufit !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_edufit-map: (
+    "pin-map": "\f101",
+    "email": "\f102",
+    "mortarboard": "\f103",
+    "mortarboard-1": "\f104",
+    "reading-book": "\f105",
+    "star": "\f106",
+    "search": "\f107",
+    "play": "\f108",
+    "virtual-event": "\f109",
+    "learning-support": "\f10a",
+    "group": "\f10b",
+    "writing": "\f10c",
+    "star-1": "\f10d",
+    "megaphone": "\f10e",
+    "learning": "\f10f",
+    "computer": "\f110",
+    "coding": "\f111",
+    "results": "\f112",
+    "worker": "\f113",
+    "technical-support": "\f114",
+    "idea": "\f115",
+    "calendar": "\f116",
+    "clock": "\f117",
+    "rating": "\f118",
+    "quotation": "\f119",
+    "protection": "\f11a",
+    "books-stack-of-three": "\f11b",
+    "pencil": "\f11c",
+    "box": "\f11d",
+    "protractor-icon": "\f11e",
+    "scale": "\f11f",
+    "plus": "\f120",
+    "translate": "\f121",
+    "terminal": "\f122",
+    "cms": "\f123",
+    "avatar": "\f124",
+    "group-1": "\f125",
+    "bubble-chat": "\f126",
+    "writing-1": "\f127",
+    "notebook": "\f128",
+    "close": "\f129",
+    "check": "\f12a",
+    "phone-call": "\f12b",
+    "expertise": "\f12c",
+    "share": "\f12d",
+    "medal": "\f12e",
+    "trophy": "\f12f",
+    "freelance-work": "\f130",
+    "exam": "\f131",
+    "mortarboard-2": "\f132",
+    "bookmark": "\f133",
+    "list": "\f134",
+    "menu": "\f135",
+    "check-1": "\f136",
+    "check-2": "\f137",
+    "inverted-commas": "\f138",
+    "like": "\f139",
+    "shopping-cart": "\f13a",
+    "check-3": "\f13b",
+    "hide": "\f13c",
+    "facebook": "\f13d",
+    "monitor": "\f13e",
+    "order": "\f13f",
+    "online-learning": "\f140",
+    "digital-certificate": "\f141",
+);
+
+.flaticon-pin-map:before {
+    content: map-get($flaticon_edufit-map, "pin-map");
+}
+.flaticon-email:before {
+    content: map-get($flaticon_edufit-map, "email");
+}
+.flaticon-mortarboard:before {
+    content: map-get($flaticon_edufit-map, "mortarboard");
+}
+.flaticon-mortarboard-1:before {
+    content: map-get($flaticon_edufit-map, "mortarboard-1");
+}
+.flaticon-reading-book:before {
+    content: map-get($flaticon_edufit-map, "reading-book");
+}
+.flaticon-star:before {
+    content: map-get($flaticon_edufit-map, "star");
+}
+.flaticon-search:before {
+    content: map-get($flaticon_edufit-map, "search");
+}
+.flaticon-play:before {
+    content: map-get($flaticon_edufit-map, "play");
+}
+.flaticon-virtual-event:before {
+    content: map-get($flaticon_edufit-map, "virtual-event");
+}
+.flaticon-learning-support:before {
+    content: map-get($flaticon_edufit-map, "learning-support");
+}
+.flaticon-group:before {
+    content: map-get($flaticon_edufit-map, "group");
+}
+.flaticon-writing:before {
+    content: map-get($flaticon_edufit-map, "writing");
+}
+.flaticon-star-1:before {
+    content: map-get($flaticon_edufit-map, "star-1");
+}
+.flaticon-megaphone:before {
+    content: map-get($flaticon_edufit-map, "megaphone");
+}
+.flaticon-learning:before {
+    content: map-get($flaticon_edufit-map, "learning");
+}
+.flaticon-computer:before {
+    content: map-get($flaticon_edufit-map, "computer");
+}
+.flaticon-coding:before {
+    content: map-get($flaticon_edufit-map, "coding");
+}
+.flaticon-results:before {
+    content: map-get($flaticon_edufit-map, "results");
+}
+.flaticon-worker:before {
+    content: map-get($flaticon_edufit-map, "worker");
+}
+.flaticon-technical-support:before {
+    content: map-get($flaticon_edufit-map, "technical-support");
+}
+.flaticon-idea:before {
+    content: map-get($flaticon_edufit-map, "idea");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon_edufit-map, "calendar");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon_edufit-map, "clock");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon_edufit-map, "rating");
+}
+.flaticon-quotation:before {
+    content: map-get($flaticon_edufit-map, "quotation");
+}
+.flaticon-protection:before {
+    content: map-get($flaticon_edufit-map, "protection");
+}
+.flaticon-books-stack-of-three:before {
+    content: map-get($flaticon_edufit-map, "books-stack-of-three");
+}
+.flaticon-pencil:before {
+    content: map-get($flaticon_edufit-map, "pencil");
+}
+.flaticon-box:before {
+    content: map-get($flaticon_edufit-map, "box");
+}
+.flaticon-protractor-icon:before {
+    content: map-get($flaticon_edufit-map, "protractor-icon");
+}
+.flaticon-scale:before {
+    content: map-get($flaticon_edufit-map, "scale");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_edufit-map, "plus");
+}
+.flaticon-translate:before {
+    content: map-get($flaticon_edufit-map, "translate");
+}
+.flaticon-terminal:before {
+    content: map-get($flaticon_edufit-map, "terminal");
+}
+.flaticon-cms:before {
+    content: map-get($flaticon_edufit-map, "cms");
+}
+.flaticon-avatar:before {
+    content: map-get($flaticon_edufit-map, "avatar");
+}
+.flaticon-group-1:before {
+    content: map-get($flaticon_edufit-map, "group-1");
+}
+.flaticon-bubble-chat:before {
+    content: map-get($flaticon_edufit-map, "bubble-chat");
+}
+.flaticon-writing-1:before {
+    content: map-get($flaticon_edufit-map, "writing-1");
+}
+.flaticon-notebook:before {
+    content: map-get($flaticon_edufit-map, "notebook");
+}
+.flaticon-close:before {
+    content: map-get($flaticon_edufit-map, "close");
+}
+.flaticon-check:before {
+    content: map-get($flaticon_edufit-map, "check");
+}
+.flaticon-phone-call:before {
+    content: map-get($flaticon_edufit-map, "phone-call");
+}
+.flaticon-expertise:before {
+    content: map-get($flaticon_edufit-map, "expertise");
+}
+.flaticon-share:before {
+    content: map-get($flaticon_edufit-map, "share");
+}
+.flaticon-medal:before {
+    content: map-get($flaticon_edufit-map, "medal");
+}
+.flaticon-trophy:before {
+    content: map-get($flaticon_edufit-map, "trophy");
+}
+.flaticon-freelance-work:before {
+    content: map-get($flaticon_edufit-map, "freelance-work");
+}
+.flaticon-exam:before {
+    content: map-get($flaticon_edufit-map, "exam");
+}
+.flaticon-mortarboard-2:before {
+    content: map-get($flaticon_edufit-map, "mortarboard-2");
+}
+.flaticon-bookmark:before {
+    content: map-get($flaticon_edufit-map, "bookmark");
+}
+.flaticon-list:before {
+    content: map-get($flaticon_edufit-map, "list");
+}
+.flaticon-menu:before {
+    content: map-get($flaticon_edufit-map, "menu");
+}
+.flaticon-check-1:before {
+    content: map-get($flaticon_edufit-map, "check-1");
+}
+.flaticon-check-2:before {
+    content: map-get($flaticon_edufit-map, "check-2");
+}
+.flaticon-inverted-commas:before {
+    content: map-get($flaticon_edufit-map, "inverted-commas");
+}
+.flaticon-like:before {
+    content: map-get($flaticon_edufit-map, "like");
+}
+.flaticon-shopping-cart:before {
+    content: map-get($flaticon_edufit-map, "shopping-cart");
+}
+.flaticon-check-3:before {
+    content: map-get($flaticon_edufit-map, "check-3");
+}
+.flaticon-hide:before {
+    content: map-get($flaticon_edufit-map, "hide");
+}
+.flaticon-facebook:before {
+    content: map-get($flaticon_edufit-map, "facebook");
+}
+.flaticon-monitor:before {
+    content: map-get($flaticon_edufit-map, "monitor");
+}
+.flaticon-order:before {
+    content: map-get($flaticon_edufit-map, "order");
+}
+.flaticon-online-learning:before {
+    content: map-get($flaticon_edufit-map, "online-learning");
+}
+.flaticon-digital-certificate:before {
+    content: map-get($flaticon_edufit-map, "digital-certificate");
+}

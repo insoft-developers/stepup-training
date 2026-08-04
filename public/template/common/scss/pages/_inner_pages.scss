@@ -1,0 +1,1189 @@
+
+
+/* 
+
+-----------------------------------------------------------------------------------
+Template Name: Edufit - Education & Online Course HTML Template
+Page Name: All Pages
+Description: The Pages of the Edufit template provides a variety of pre-designed page layouts to help you build your educational website quickly and efficiently.
+Author: Pixelfit
+Version: 1.0 
+-----------------------------------------------------------------------------------
+
+*/
+
+
+@import "./../abstract/index";
+
+:root{
+    --primary-color: #6255FA;
+    --secondary-color: #06193A;
+}
+
+/*  Page Banner CSS  */ 
+
+.ef-page-hero{
+    padding: 125px 0 145px;
+    @include respond(phone){
+        padding: 85px 0 105px;
+    }
+    & .page-content{
+        & h1{
+            @include respond(phone){
+                font-size: 32px;
+                line-height: 45px;
+            }
+        }
+        & ul{
+            & li{
+                display: inline-flex;
+                align-items: center;
+                &:last-child{
+                    &:after{
+                        display: none;
+                    }
+                }
+                &:after{
+                    display: inline-block;
+                    content: '\f101';
+                    font-family: 'Font Awesome 5 Pro';
+                    margin-left: 10px;
+                    margin-right: 8px;
+                }
+                &.active{
+                    color: $primary-color;
+                }
+                & a{
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*  About Page CSS  */ 
+
+.ef-intro-sec{
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    background-position: center center;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 25, 58, 0.70);
+        z-index: -1;
+    }
+}
+/* Testimonial Section */ 
+
+.testimonial-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    @include respond(medium){
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+        @include respond(medium){
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+    }
+}
+
+
+/*  Course  Page Css  */ 
+
+.course-filter{
+    & .show-text{
+        & p{
+            color: $heading-color;
+            font-weight: 500;
+        }
+    }
+    & .filter-grid-list{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        @include respond(sm-phone){
+            justify-content: center;
+        }
+        & a{
+            display: inline-flex;   
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px 20px;
+            line-height: 20px;
+            background-color: rgba(26, 26, 26, 0.01);
+            border: 1px solid rgba(33, 37, 41, 0.10);
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            & i{
+                margin-right: 7px;
+                color: $primary-color;
+                line-height: 0;
+            }
+            &:hover{
+                background-color: $primary-color;
+                color: $white-color;
+                & i{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+.edufit-tabs{
+    margin-bottom: 40px;
+    & .nav-link{
+        border-radius: 0;
+        border: none;
+        margin-bottom: 0;
+        margin-right: 30px;
+        padding: 0;
+        padding-bottom: 15px;
+        color: $heading-color;
+        font: 500 18px $heading-font;
+        &.active{
+            color: $primary-color;
+        }
+        @include respond(phone){
+            margin-right: 15px;
+            font-size: 16px;
+        }
+    }
+}
+
+ul.ratings{
+    & li{
+        display: inline-block;
+    }
+}
+
+.course-details-wrapper{
+    & .course-thumbnail{
+        margin-bottom: 35px;
+        & img{
+            border-radius: 10px;
+        }
+    }
+    & .course-info{
+        & h3.title{
+            font-size: 48px;
+            line-height: 60px;
+            margin-bottom: 25px;
+            @include respond(tablet){
+                font-size: 24px;
+                line-height: 35px;
+            }
+            @include respond(phone){
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        & .course-meta{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            & .instructor-box{
+                margin-bottom: 20px;
+            }
+            & .ef-category-box{
+                margin-bottom: 20px;
+                & h6{
+                    margin-bottom: 10px;
+                }
+            }
+            & .ef-rating-box{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    & .edufit-content-box{
+        & h4{
+            margin-bottom: 20px;
+        }
+        & p{
+            margin-bottom: 25px;
+        }
+        & ul{
+            margin-bottom: 20px;
+        }
+        & ul.video-list{
+            & li{
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        & .accordion-content{
+            padding-top: 30px;
+        }
+    }
+    & .course-instructor-box{
+        display: flex;
+        align-items: center;
+        @include respond(phone){
+            flex-direction: column;
+        }
+        & .instructor-thumbnail{
+            max-width: 270px;
+            flex: 0 0 auto;
+            margin-right: 30px;
+            @include respond(phone){
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+            & img{
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        & .instructor-info{
+            & h4{
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 35px;
+            }
+            & ul.social-link{
+                & li{
+                    display: inline-block;
+                    & a{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid $border-color;
+                        font-size: 16px;
+                        &:hover{
+                            background-color: $primary-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .rating-box{
+        display: flex;
+        align-items: flex-start;
+        & .author-avatar{
+            flex: 0 0 auto;
+            width: 60px;
+            margin-right: 20px;
+            & img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        & .author-content{
+            & .author-name{
+                font-weight: 700;
+                color: $heading-color;
+                & span{
+                    margin-left: 10px;
+                    font-size: 16px;
+                    color: $text-color;
+                    font-weight: 400;
+                }
+            }
+            & ul{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/*  Event Details Wrapper  */
+
+.event-details-wrapper{
+    & .event-thumbnail{
+        margin-bottom: 30px;
+        & img{
+            border-radius: 10px;
+        }
+    }
+    & .event-info{
+        & h4,
+        & h4.title{
+            margin-bottom: 20px;
+        }
+        &  p{
+            margin-bottom: 30px;
+        }
+        & .block-image{
+            margin-bottom: 25px;
+            & img{
+                border-radius: 10px;
+            }
+        }
+        & ul.check-list{
+            margin-bottom: 25px;
+        }
+    }
+} 
+
+
+.form-check{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    & .form-check-input{
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 10px;
+        &:focus{
+            box-shadow: none;
+        }
+        &:checked{
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
+    @include respond(sm-phone){
+        font-size: 14px;
+    }
+    & a{
+        margin-left: auto;
+    }
+}
+
+
+/* Instructor Details */
+
+.instructor-details-wrapper{
+    & .instructor-item{
+        border-radius: 10px;
+        border: 1px solid rgba(33, 37, 41, 0.10);
+        background-color: rgba(26, 26, 26, 0.01);
+        padding: 20px;
+        text-align: center;
+        & .instructor-thumbnail{
+            max-width: 260px;
+            height: 250px;
+            display: inline-block;
+            & img{
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        & .instructor-info{
+            text-align: center;
+            padding-top: 10px;
+            & span.position{
+                margin-bottom: 10px;
+            }
+            & h6{
+                margin-bottom: 15px;
+                font-family: $body-font;
+                color: $text-color;
+                font-weight: 400;
+                & span{
+                    font-weight: 600;
+                    color: $heading-color;
+                }
+            }
+            & ul.social-link{
+                margin-bottom: 30px;
+                & li{
+                    display: inline-block;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    & a{
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid $border-color;
+                        color: $primary-color;
+                        font-size:16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    & .instructor-info-wrapper{
+        & .instructor-info{
+            border: 1px solid $border-color;
+            padding: 20px 30px 25px;
+            border-radius: 10px;
+            background-color: rgba(26, 26, 26, 0.01);
+            & span.position{
+                margin-bottom: 5px;
+            }
+            & .instructor-meta{
+                padding-top: 20px;
+                margin-top: 20px;
+                border-top: 1px solid $border-color;
+                & span{
+                    &:not(:last-child){
+                        margin-right: 30px;
+                    }
+                    & span{
+                        color: $heading-color;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        & .edufit-content-box{
+            & > h3{
+                margin-bottom: 20px;
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 15px;
+            }
+            & > h5{
+                margin-bottom: 20px;
+                & span{
+                    border: 1px solid $primary-color;
+                    color: $primary-color;
+                    padding: 8px 10px;
+                    border-radius: 30px;
+                    margin-left: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.progress-item{
+    &.style-one{
+        & .progress-title{
+            margin-bottom: 20px;
+            & h6{
+                & span{
+                    float: right;
+                }
+            }
+        }
+        & .progress{
+            height: 6px;
+            & .progress-bar{
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Faq Page CSS */
+
+.ef-faq-sec{
+    & .ef-accordion-item{
+        & .accordion-title[aria-expanded=true]{
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+}
+
+.ef-faq-info-sec{
+    & .faq-info-box{
+        padding: 38px 50px 45px;
+        border-radius: 10px;
+        @include respond(phone){
+            padding: 38px 30px 45px;   
+        }
+        & .ef-iconic-info-box{
+            margin-bottom: 35px;
+        }
+        & h3{
+            margin-bottom: 15px;
+        }
+        & > p{
+            font-size: 20px;
+            line-height: 32px;
+            color: rgba(33, 37, 41, 0.70);
+        }
+    }
+}
+
+
+/*  Blog Page CSS  */ 
+
+.blog-details-wrapper{
+    & .blog-post-main{
+        & .ef-blog-post{
+            & .post-thumbnail{
+                margin-bottom: 30px;
+                & img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+            & .post-content{
+                & .post-meta{
+                    margin-bottom: 10px;
+                    & span{
+                        margin-bottom: 10px;
+                        &:not(:last-child){
+                            margin-right: 30px;
+                            @include respond(phone){
+                                margin-right: 15px;
+                            }
+                            @include respond(sm-phone){
+                                margin-right: 9px;
+                            }
+                        }
+                        &.category{
+                            & a{
+                                background-color: $primary-color;
+                                color: $white-color;
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                border-radius: 30px;
+                                line-height: 15px;
+                            }
+                        }
+                        & i{
+                            margin-right: 10px;
+                            color: $primary-color;
+                        }
+                    }
+                }
+                & h4.title{
+                    font-size: 32px;
+                    line-height: 45px;
+                    margin-bottom: 20px;
+                    @include respond(sm-phone){
+                        font-size: 22px;
+                        line-height: 35px;
+                    }
+                }
+                & p{
+                    margin-bottom: 25px;
+                }
+                & .blockquote{
+                    position: relative;
+                    padding: 40px;
+                    border-radius: 10px;
+                    border-left: 5px solid $primary-color;
+                    background: rgba(98, 85, 250, 0.05);
+                    z-index: -1;
+                    & p{
+                        color: $heading-color;
+                        font-size: 20px;
+                        line-height: 32px;
+                    }
+                    & .icon{
+                        position: absolute;
+                        bottom: 20px;
+                        right: 40px;
+                    }
+                }
+                & .eduit-img{
+                    & img{
+                        width: 100%;
+                        border-radius: 10px;
+                    }
+                }
+                & .check-list{
+                    & li{
+                        font-size: 15px;
+                    }
+                }
+                & h4{
+                    margin-bottom: 15px;
+                }
+            }
+            & .entry-footer{
+                border-top: 1px solid rgba(33, 37, 41, 0.10);
+                border-bottom: 1px solid rgba(33, 37, 41, 0.10);
+                padding: 25px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @include respond(phone){
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                & span{
+                    color: $heading-color;
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+                & .tag-links{
+                    @include respond(phone){
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+                    & a{
+                        padding: 2px 10px;
+                        border-radius: 4px;
+                        border: 1px solid rgba(33, 37, 41, 0.10);
+                        margin-right: 5px;
+                        &:hover{
+                            background-color: $primary-color;
+                            color: $white-color;
+                            border-color: transparent;
+                        }
+                    }
+                }
+                & .social-share{
+                    @include respond(phone){
+                        text-align: center;
+                    }
+                    & a{
+                        &:hover{
+                            color: $primary-color;
+                        }
+                        &:not(:last-child){
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .comments-area{
+        & .comments-list{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        & .comment{
+            padding: 25px 30px 20px;
+            border: 1px solid $border-color;
+            background-color: rgba(26, 26, 26, 0.01);
+            display: flex;
+            border-radius: 10px;
+            & .comment-avatar{
+                flex: 0 0 auto;
+                width: 55px;
+                height: 55px;
+                margin-right: 15px;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            & .comment-author-content{
+                & span{
+                    margin-bottom: 15px;
+                    display: block;
+                    line-height: 25px;
+                    &.author-name{
+                        display: block;
+                        font: 700 20px $heading-font;
+                        color: $heading-color;
+                        line-height: 32px;
+                    }
+                    &.date{
+                        font: 400 16px $body-font;
+                        color: $text-color;
+                    }
+                }
+                & p{
+                    margin-bottom: 15px;
+                }
+                & .reply{
+                    color: $heading-color;
+                    font-weight: 500;
+                    & i{
+                        color: $primary-color;
+                        margin-right: 7px;
+                    }
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Sidebar Widget Area */ 
+
+.sidebar-widget-area{
+    & .sidebar-widget{
+        padding: 23px 30px 30px;
+        border-radius: 10px;
+        border: 1px solid rgba(33, 37, 41, 0.10);
+        background-color: rgba(26, 26, 26, 0.01);
+        & h4.sidebar-title{
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            &:after{
+                display: block;
+                content: '';
+                width: 70px;
+                height: 2px;
+                background-color: $primary-color;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        & ul.radio-list{
+            & li{
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                & label{
+                    display: block;
+                }
+                & span{
+                    width: 100%;
+                    & span{
+                        float: right;
+                    }
+                }
+            }
+        }
+        &.sidebar-search-widget{
+            padding: 0;
+            background-color: transparent;
+            .widget-content{
+                & form{
+                    & input{
+                        border-radius: 8px;
+                        width: 100%;
+                        border: none;
+                        background-color: rgba(26, 26, 26, 0.01);
+                        padding: 12px 20px;
+                        font-size: 18px;
+                    }
+                    & .search-btn{
+                        color: $heading-color;
+                        position: absolute;
+                        top: 13px;
+                        right: 20px;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &.sidebar-post-widget{
+            & .recent-post-list{
+                & .post-thumbnail-content{
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child){
+                        margin-bottom: 30px;
+                    }
+                    & img{
+                        flex: 0 0 auto;
+                        margin-right: 20px;
+                        object-fit: contain;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 7px;
+                    }
+                    & .post-title-date{
+                        & h6{
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 25px;
+                            &:hover{
+                                color: $primary-color;
+                            }
+                        }
+                        & span.posted-on{
+                            font-size: 14px;
+                            color: rgba(0, 0, 0, 0.60);
+                        }
+                    }
+                }
+            }
+        }
+        &.sidebar-category-widget{
+            padding: 23px 30px 25px;
+            & .widget-content{
+                & ul{
+                    & li{
+                        &:not(:last-child){
+                            & a{
+                                padding-bottom: 15px;
+                                border-bottom: 1px solid $border-color;
+                                margin-bottom: 15px;
+                            }
+                        }
+                        & a{
+                            display: flex;
+                            align-items: center;
+                            font: 500 16px $body-font;
+                            &:hover{
+                                color: $primary-color;
+                            }
+                            & i{
+                                margin-right: 10px;
+                            }
+                            & span{
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.sidebar-tag-widget{
+            padding: 23px 30px 20px;
+            & .tagcloud{
+                & a{
+                    padding: 7px 20px;
+                    line-height: 20px;
+                    border-radius: 8px;
+                    background-color: $white-color;
+                    border: 1px solid $border-color;
+                    font: 500 16px $heading-font;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                    margin-right: 5px;
+                    &:hover{
+                        background-color: $primary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        &.sidebar-course-info-widget{
+            padding: 20px;
+            & .widget-content{
+                & .course-preview{
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 7px;
+                    margin-bottom: 15px;
+                    & img{
+                        border-radius: 7px;
+                    }
+                    & .play-button{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        & .video-popup{
+                            width: 50px;
+                            height: 50px;
+                            font-size: 14px;
+                            &:after,
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                    & .hover-overlay{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, 0.50);
+                        border-radius: 7px;
+                    }
+                }
+                & .course-info{
+                    & h4{
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+                        & span{
+                            &.price{
+                                background-color: $primary-color;
+                                color: $white-color;
+                                padding: 7px 15px;
+                                line-height: 14px;
+                                border-radius: 10px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    & .course-button{
+                        margin-bottom: 15px;
+                        & .theme-btn{
+                            display: block;
+                            width: 100%;
+                            margin-bottom: 15px;
+                        }
+                        & p{
+                            font-size: 16px;
+                        }
+                    }
+                    & h4.title{
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                    & ul{
+                        & li{
+                            font-size: 16px;
+                            &:not(:last-child){
+                                margin-bottom: 10px;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid $border-color;
+                            }
+                            & span{
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.sidebar-event-widget{
+            & h4.price{
+                color: $primary-color;
+                margin-bottom: 10px;
+                span{
+                    padding: 10px 12px;
+                    line-height: 10px;
+                    font-size: 14px;
+                    background-color: $primary-color;
+                    color: $white-color;
+                    float: right;
+                    letter-spacing: 0.14px;
+                    border-radius: 14px;
+                }
+            }
+            & ul{
+                & li{
+                    display: block;
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid $border-color;
+                    & span{
+                        float: right;
+                    }
+                }
+            }
+            & .theme-btn{
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+/* Contact Page CSS */ 
+
+.form_control{
+    margin-bottom: 20px;
+    padding: 13px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(33, 37, 41, 0.10);
+    background-color: rgba(26, 26, 26, 0.01);
+    transition: all .3s;
+    &:focus{
+        border-color: $primary-color;
+    }
+}
+
+.contact-form{
+    & label{
+        color: $heading-color;
+        margin-bottom: 7px;
+        & span{
+            color: #FC6E6E;
+        }
+    }
+    & textarea{
+        margin-bottom: 30px;
+    }
+    & .theme-btn{
+        width: 100%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+
+.contact-wrapper{
+    padding: 45px 60px 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(33, 37, 41, 0.10);
+    background-color: rgba(26, 26, 26, 0.01);
+    @include respond(phone){
+        padding: 30px 30px 45px;
+    }
+    & h2{
+        margin-bottom: 10px;
+        @include respond(phone){
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+    & p{
+        margin-bottom: 13px;
+    }
+}
+
+
+
+
+/*  Signup Page CSS  */ 
+
+.ef-user-sec{
+    & .user-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(tablet){
+            flex-direction: column-reverse;
+        }
+    }
+    & .user-left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 50px;
+        & img{
+            @include respond(tablet){
+                display: none;
+            }
+        }
+        @include respond(tablet){
+            width: 100%;
+            height: 100px;
+        }
+    }
+    & .user-right{
+        width: 50%;
+        @include respond(tablet){
+            width: 100%;
+        }
+    }
+    & .user-right{
+        padding: 100px;
+        @include respond(laptop){
+            padding: 50px;
+        }
+        @include respond(tablet){
+            padding: 50px;
+        }
+        @include respond(sm-phone){
+            padding: 30px;
+        }
+        & .user-form-wrapper{
+            border-radius: 10px;
+            border: 1px solid rgba(33, 37, 41, 0.10);
+            background: rgba(26, 26, 26, 0.01);
+            /*background-color: $white-color;*/
+            padding: 80px 100px;
+            @include respond(laptop){
+                padding: 50px 70px;
+            }
+            @include respond(tablet){
+                padding: 30px;
+            }
+            @include respond(sm-phone){
+                padding: 20px;
+            }
+            & .brand-logo{
+                margin-bottom: 35px;
+            }
+            & h3{
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 20px;
+            }
+            & .login-form{
+                & label{
+                    color: $heading-color;
+                    & span{
+                        color: #FC6E6E;
+                    }
+                }
+                & .theme-btn{
+                    width: 100%;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+            & .login-link{
+                &:hover{
+                    & a{
+                        color: $primary-color;
+                    }
+                }
+            }
+            & .others-login{
+                position: relative;
+                z-index: 1;
+                & .text{
+                    padding: 0 15px;
+                    display: inline-block;
+                    background-color: $white-color;
+                }
+                &:after{
+                    position: absolute;
+                    top: 15px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(33, 37, 41, 0.10);
+                    content: '';
+                    z-index: -1;
+                }
+            }
+            & .social-login{
+                & .theme-btn{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    &.style-one{
+                        background-color: rgba(26, 26, 26, 0.01);
+                        color: $heading-color;
+                        & img{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            & .register{
+                & a{
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+/*  404 Page CSS  */
+
+.ef-error-sec{
+    & .edufit-content-box{
+        & .edufit-img{
+            margin-bottom: 40px;
+        }
+        & h1{
+            margin-bottom: 20px;
+            @include respond(tablet){
+                font-size: 44px;
+                line-height: 55px;
+            }
+        }
+    }
+}

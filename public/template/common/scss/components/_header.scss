@@ -1,0 +1,536 @@
+/*---- 
+====================
+02. Components CSS
+    # Header CSS
+====================
+
+----*/ 
+
+@use "./../abstract";
+
+/* Transparent header */
+
+.transparent-header {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* Edufit Dropdown */
+
+.edufit-dropdown{
+    position: relative;
+    font-size: 16px;
+    &.currency-dropdown{
+        margin-left: 25px;
+    }
+    & > a{
+        color: $white-color;
+    }
+    &:hover{
+        & .dropdown{
+            opacity: 1;
+            display: block;
+            visibility: visible;
+            margin: 6px 0 0 0;
+        }
+    }
+    & .dropdown{
+        transition: all 0.3s ease-in-out;
+        min-width: 100px;
+        padding: 10px 15px;
+        margin: 25px 0 0 0;
+        position: absolute;
+        z-index: 16;
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        left: 0;
+        font-size: 16px;
+        right: auto !important;
+        background: #fff;
+        box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.07);
+        border: 1px solid #eee;
+        display: block;
+        border-radius: 10px;
+        & a{
+            transition: all 0.3s ease-in-out;
+            font-size: 14px;
+            font-weight: 400;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+/* Header TopBar */
+
+.header-top{
+    padding: 7px 0;
+    @include respond(medium){
+        display: none;
+    }
+    & .container-fluid{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    & .top-left{
+        & span{
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            color: $white-color;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            & i{
+                margin-right: 10px;
+                color: $white-color;
+                line-height: 0;
+            }
+            & a{
+                letter-spacing: -0.28px;
+            }
+        }
+    }
+    & .top-right{
+        display: flex;
+        justify-content: flex-end;
+        & ul{
+            &:not(:last-child){
+                &:after{
+                    display: inline-block;
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $heading-color;
+                    margin-left: 30px;
+                    margin-right: 30px;
+                }
+            }
+            &.social-link{
+                & li{
+                    &:not(:last-child){
+                        margin-right: 15px;
+                    }
+                    & a{
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/* Header Navigation */
+
+.header-navigation{
+    @include respond(tablet){
+        padding: 15px 0;
+    }
+    & .primary-menu{
+        display: flex;
+        align-items: center;
+    }
+    & .site-branding{
+        max-width: 200px;
+    }
+    & .main-menu{
+        & ul{
+            & > li{
+                display: inline-block;
+                position: relative;
+                margin-left: 17px;
+                margin-right: 17px;
+                @include respond(tablet){
+                    margin-left: 12px;
+                    margin-right: 12px;
+                }
+                & > a {
+                    position: relative;
+                    display: block;
+                    font: 600 18px $heading-font;
+                    text-transform: capitalize;
+                    line-height: 1;
+                    color: $heading-color;
+                    padding: 36px 0;
+                    &:after{
+                        position: absolute;
+                        bottom: 35%;
+                        right: 0;
+                        content: '';
+                        width: 0%;
+                        height: 1px;
+                        background-color: $primary-color;
+                        transition: .35s ease-in-out;
+                    }
+                    & span.dd-trigger{
+                        margin-left: 5px;
+                    }
+                }
+                & .sub-menu {
+                    position: absolute;
+                    left: 0;
+                    top: 120%;
+                    width: 250px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.2s;
+                    z-index: 99;
+                    padding: 10px 0;
+                    background-color: $white-color;
+                    height: auto;
+                    text-align: left;
+                    box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.03);
+                    border-radius: 7px;
+                    & li {
+                        display: block;
+                        margin: 0;
+                        & a {
+                            display: flex;
+                            align-items: center;
+                            padding: 0 30px;
+                            position: relative;
+                            line-height: 2.5;
+                            margin: 0;
+                            color: $heading-color;
+                            @include transition(.3s);
+                            & span.dd-trigger{
+                                margin-left: auto;
+                            }
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                        & .sub-menu {
+                            left: 100%;
+                            top: 50%;
+                            @include respond(tablet){
+                                left: auto;
+                                right: 100%;
+                                top: 50%;
+                            }
+                            @include respond(laptop){
+                                left: auto;
+                                right: 100%;
+                                top: 50%;
+                            }
+                        }
+                        &:hover {
+                            & .sub-menu {
+                                top: 0%;
+                            }
+                            & > a{
+                                margin-left: 5px;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    & > a{
+                        color: $primary-color;
+                    }
+                    & > .sub-menu {
+                        opacity: 1;
+                        visibility: visible;
+                        top: 100%;
+                    }
+                }
+            }
+		}
+    }
+    & .navbar-toggler {
+		padding: 11px 9px;
+		border: 1px solid $border-color;
+		background-color: transparent;
+		cursor: pointer;
+        display: none;
+        border-radius: 5px;
+		& span {
+			position: relative;
+			border-radius: 3px;
+			display: block;
+			height: 2px;
+			padding: 0;
+			width: 25px;
+			cursor: pointer;
+			display: block;
+            @include transition(.3s);
+            background-color: $heading-color;
+            &:not(:first-child){
+                margin-top: 5px;
+            }
+		}
+		&.active {
+			span:nth-of-type(1) {
+				transform: rotate3d(0, 0, 1, 45deg);
+				top: 7px;
+			}
+			span:nth-of-type(2) {
+				opacity: 0;
+			}
+			span:nth-of-type(3) {
+				transform: rotate3d(0, 0, 1, -45deg);
+				top: -7px;
+			}
+		}
+	}
+    @include respond(tablet){
+        & .edufit-nav-menu{
+            text-align: left;
+            position: fixed;
+            top: 0;
+            left: -290px;
+            width: 290px;
+            height: 100%;
+            transition-duration: 500ms;
+            padding: 20px 20px 30px;
+            display: block;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            z-index: 9999;
+            background-color: $white-color;
+            &.menu-on {
+                left: 0;
+            }
+            & .main-menu {
+                margin-top: 30px;
+                & ul li {
+                    display: block;
+                    margin: 0;
+                    &:not(:last-child){
+                        border-bottom: 1px solid $border-color;
+                    }
+                    & a {
+                        display: block;
+                        padding: 12px 0;
+                        font-size: 18px;
+                        &:after{
+                            display: none;
+                        }
+                    }   
+                    & .sub-menu {
+                        width: 100%;
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        padding: 0;
+                        box-shadow: none;
+                        background-color: transparent;
+                        visibility: visible;
+                        opacity: 1;
+                        display: none;
+                        transition: none;
+                        & > li {
+                            & > a{
+                                padding: 5px 20px;
+                            }
+                            & .sub-menu{
+                                width: 100%;
+                                position: relative;
+                                top: 0;
+                                left: 0;
+                                padding: 0;
+                                box-shadow: none;
+                                background-color: transparent;
+                                visibility: visible;
+                                opacity: 1;
+                                display: none;
+                                transition: none;
+                                margin-left: 30px;
+                            }
+                        }
+                    }
+                    & .dd-trigger {
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 3px;
+                        z-index: 2;
+                        cursor: pointer;
+                        font-size: 16px;
+                    }
+                }
+            }
+            & .edufit-nav-button{
+                & .theme-btn{
+                    &.style-one{
+                        padding: 13px 25px;
+                        border-radius: 5px;
+                        margin-right: 15px;
+                        line-height: 24px;
+                    }
+                    &.style-two{
+                        padding: 9px 25px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+        & .navbar-close{
+            width: 35px;
+            height: 35px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $border-color;
+            font-size: 16px;
+        }
+        & .navbar-toggler{
+            display: block;
+        }
+    }
+}
+
+/* Nav Right Item */
+
+.nav-right-item{
+    display: flex;
+    align-items: center;
+    & .search-btn{
+        margin-right: 20px;
+        & .icon{
+            background-color: $white-color;
+            width: 55px;
+            height: 55px;
+            border-radius: 13px;
+            border: 1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $heading-color;
+            @include respond(tablet){
+                width: 45px;
+                height: 40px;
+                border-radius: 5px;
+            }
+        }
+    }
+    & .nav-button{
+        & .theme-btn{
+            padding: 12px 25px;
+            &.style-two{
+                margin-left: 15px;
+                padding: 10px 25px;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
+/* Header Style One */
+
+.header-one{
+    & .header-top{
+        background-color: #06193A;
+    }
+    & .header-navigation{
+        & .container-fluid{
+            padding-left: 60px;
+            padding-right: 60px;
+            @include respond(tablet){
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        & .primary-menu{
+            & .edufit-nav-menu{
+                margin-left: 6%;
+                @include respond(tablet){
+                    margin-left: 0;
+                }
+            }
+            & .nav-right-item{
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+/* Header Style Two */
+
+.header-two{
+    & .header-top{
+        background-color: #06193A;
+    }
+    & .header-navigation{
+        & .container-fluid{
+            padding-left: 60px;
+            padding-right: 60px;
+            @include respond(tablet){
+                padding-left: 15px;
+                padding-right: 15px; 
+            }
+        }
+        & .primary-menu{
+            justify-content: center;
+            @include respond(tablet){
+                justify-content: space-between;
+            }
+        }
+        & .site-branding{
+            width: 10%;
+            @include respond(tablet){
+                width: auto;
+            }
+        }
+        & .edufit-nav-menu{
+            width: 70%;
+            text-align: center;
+            @include respond(tablet){
+                width: auto;
+                text-align: left;
+            }
+        }
+        & .nav-right-item{
+            width: 20%;
+            @include respond(tablet){
+                width: auto;
+            }
+        }
+    }
+}
+
+
+/* Header Sticky */
+
+.header-navigation {
+    &.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        border-color: transparent;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08);
+        animation: sticky 1.2s;
+        background-color: $white-color;
+    }
+}
+
+@-webkit-keyframes sticky {
+    0% {
+      top: -200px;
+    }
+    100% {
+      top: 0;
+    }
+}
+@keyframes sticky {
+    0% {
+      top: -200px;
+    }
+    100% {
+      top: 0;
+    }
+}

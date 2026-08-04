@@ -1,0 +1,259 @@
+
+/*---
+
+-----------------------------------------------------------------------------------
+Template Name: Edufit - Education & Online Course HTML Template
+Page Name: Home Online
+Description: The Home - Online Courses page of Edufit is designed to effectively showcase and promote your online courses. 
+Author: Pixelfit
+Version: 1.0 
+-----------------------------------------------------------------------------------
+
+---*/
+
+@import "./../abstract/index";
+
+/* Hero Section */ 
+
+.hero-wrapper{
+    position: relative;
+    background-color: #FCFCFF;
+    z-index: 1;
+    padding-top: 50px;
+    & .elements{
+        position: absolute;
+        z-index: -1;
+        @include respond(medium){
+            display: none;
+        }
+        &.element_one{
+            left: 0;
+            top: 0;
+            @include respond(laptop){
+                left: -80px;
+            }
+        }
+        &.element_two{
+            bottom: 35px;
+            left: 35px;
+        }
+        &.element_three{
+            top: 80px;
+            right: 40%;
+        }
+    }
+    & .lineanm{
+        position: absolute;
+        top: -25px;
+        right: -20px;
+        height: 550px;
+        width: 290px;
+        z-index: -1;
+        @include respond(medium){
+            display: none;
+        }
+        & .line {
+            fill: none;
+            stroke-dasharray: 2400;
+            stroke-dashoffset: 2400;
+            animation: line 2s ease-in-out reverse infinite;
+            animation-direction: alternate-reverse;
+        }
+    }
+    & .hero-image-box{
+        position: relative;
+        z-index: 1;
+        text-align: right;
+        margin-right: -200px;
+        @include respond(laptop){
+            margin-right: -60px;
+        }
+        @include respond(tablet){
+            margin-right: 0;
+        }
+        @include respond(medium){
+            text-align: center;
+        }
+        & .image_one{
+            position: absolute;
+            left: 120px;
+            bottom: 150px;
+            z-index: 1;
+            @include respond(laptop){
+                left: 0;
+            }
+            @include respond(tablet){
+                left: 0;
+                bottom: 50px;
+            }
+            @include respond(medium){
+                bottom: 150px;
+            }
+            @include respond(phone){
+                display: none;
+            }
+            & img{
+                border-radius: 15px;
+                box-shadow: -3px 0px 50px 0px rgba(98, 85, 250, 0.10);
+            }
+        }
+        & .ef-iconic-box{
+            position: absolute;
+            top: 100px;
+            right: -5%;
+            text-align: left;
+            max-width: 260px;
+            z-index: 1;
+            @include respond(laptop){
+                top: 180px;
+                right: -2%;
+            }
+            @include respond(tablet){
+                right: -8%;
+                top: 30%;
+            }
+            @include respond(medium){
+                top: 25%;
+                right: 7%;
+            }
+            @include respond(phone){
+                top: 50%;
+                right: 15%;
+            }
+        }
+    }
+    & .hero-content{
+        padding-top: 145px;
+        @include respond(tablet){
+            padding-top: 85px;
+        }
+        @include respond(medium){
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        & .sub-heading{
+            color: $primary-color;
+            display: inline-flex;
+            align-items: center;
+            & i{
+                margin-right: 10px;
+                margin-top: 4px;
+            }
+        }
+        & h1{
+            margin-bottom: 3px;
+            @include respond(laptop){
+                font-size: 55px;
+                line-height: 75px;
+            }
+            @include respond(tablet){
+                font-size: 40px;
+                line-height: 55px;
+            }
+            @include respond(medium){
+                max-width: 490px;
+                margin: 0 auto 30px;
+            }
+            & span{
+                &.c1{
+                    position: relative;
+                    color: $primary-color;
+                    & .shape-one{
+                        position: absolute;
+                        top: -30px;
+                        right: -45px;
+                    }
+                    @include respond(phone){
+                        display: none;
+                    }
+                }
+                &.c2{
+                    color: $secondary-color;
+                }
+            }
+        }
+        & p{
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.hero-subscribe{
+    position: relative;
+    @include respond(medium){
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .form-group{
+        position: relative;
+    }
+    & input{
+        padding: 12px 20px;
+        border-radius: 13px;
+        font-size: 16px;
+        border: 1px solid $border-color;
+    }
+    & .theme-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+}
+
+@keyframes line {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+/* Category Section */ 
+
+.ef-category-sec{
+    
+}
+
+/* Intro Section */ 
+
+.intro-wrapper_one{
+    position: relative;
+    z-index: 1;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: -150px;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 25, 58, 0.70);
+        z-index: -1;
+    }
+}
+
+/* Testimonial Section */ 
+
+.testimonial-slider{
+    margin-left: -15px;
+    margin-right: -15px;
+    @include respond(medium){
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+    & .slick-slide{
+        margin-left: 15px;
+        margin-right: 15px;
+        @include respond(medium){
+            margin-right: 12px;
+            margin-left: 12px;
+        }
+    }
+}

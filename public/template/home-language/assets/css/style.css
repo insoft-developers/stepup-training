@@ -1,0 +1,223 @@
+/*---
+
+-----------------------------------------------------------------------------------
+Template Name: Edufit - Education & Online Course HTML Template
+Page Name: Home Language
+Description: The Home - Language Courses page of Edufit is specifically designed to promote language learning programs.
+Author: Pixelfit
+Version: 1.0 
+-----------------------------------------------------------------------------------
+
+---*/
+:root {
+  --primary-color: #6255FA;
+  --secondary-color: #AD86F3;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  padding: 70px 0;
+}
+.hero-wrapper .hero-main {
+  position: relative;
+  z-index: 1;
+}
+.hero-wrapper .hero-main .hero-img_one {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+@media (max-width: 575px) {
+  .hero-wrapper .hero-main .hero-img_one {
+    top: -50px;
+  }
+}
+.hero-wrapper .hero-main .hero-img_one img {
+  border-radius: 10px;
+}
+@media (min-width: 1200px) and (max-width: 1450px) {
+  .hero-wrapper .hero-main .hero-img_one img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero-wrapper .hero-main .hero-img_one img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-wrapper .hero-main .hero-img_one img {
+    width: 40%;
+  }
+}
+@media (max-width: 575px) {
+  .hero-wrapper .hero-main .hero-img_one img {
+    width: 30%;
+  }
+}
+.hero-wrapper .hero-main .hero-img_two {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+}
+.hero-wrapper .hero-main .hero-img_two img {
+  border-radius: 10px;
+}
+@media (min-width: 1200px) and (max-width: 1450px) {
+  .hero-wrapper .hero-main .hero-img_two img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero-wrapper .hero-main .hero-img_two img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-wrapper .hero-main .hero-img_two img {
+    width: 40%;
+  }
+}
+@media (max-width: 575px) {
+  .hero-wrapper .hero-main .hero-img_two img {
+    width: 30%;
+  }
+}
+.hero-wrapper .hero-main .certified {
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  text-align: right;
+}
+@media screen and (max-width: 991px) {
+  .hero-wrapper .hero-main .certified {
+    right: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-wrapper .hero-main .certified {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-wrapper .hero-main .certified img {
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .hero-wrapper .hero-main .certified img {
+    width: 50%;
+  }
+}
+.hero-wrapper .hero-main .join-countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 575px) {
+  .hero-wrapper .hero-main .join-countdown {
+    top: -50px;
+  }
+}
+.hero-wrapper .hero-content {
+  padding: 105px 0 130px;
+}
+.hero-wrapper .hero-content span.sub-heading {
+  padding: 5px 15px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.hero-wrapper .hero-content h1 {
+  margin-bottom: 10px;
+}
+.hero-wrapper .hero-content h1 span {
+  color: var(--secondary-color);
+}
+@media screen and (max-width: 1199px) {
+  .hero-wrapper .hero-content h1 {
+    font-size: 40px;
+    line-height: 55px;
+    max-width: 450px;
+    margin: 0 auto 10px;
+  }
+}
+.hero-wrapper .hero-content p {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .hero-wrapper .hero-content p {
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+}
+
+.ef-why-choose-sec .edufit-content-box {
+  padding-right: 70px;
+}
+@media screen and (max-width: 1199px) {
+  .ef-why-choose-sec .edufit-content-box {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+}
+.ef-why-choose-sec .ef-iconic-box.style-one {
+  border-radius: 10px;
+  border: 1px solid rgba(33, 37, 41, 0.1);
+  background: rgba(26, 26, 26, 0.01);
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ef-why-choose-sec .ef-iconic-box.bg-one {
+  background-color: #F7F3FE;
+}
+.ef-why-choose-sec .ef-iconic-box.bg-two {
+  background-color: #E3F9F2;
+}
+
+.ef-faq-sec .edufit-content-box .edufit-image-box .edufit-img img {
+  border-radius: 150px;
+}
+
+.testimonial-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+@media screen and (max-width: 1199px) {
+  .testimonial-wrapper {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .testimonial-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.testimonial-wrapper .ef-testimonial-item.style-two {
+  width: 200px;
+}
+@media screen and (max-width: 991px) {
+  .testimonial-wrapper .ef-testimonial-item.style-two {
+    width: 100%;
+  }
+}
+.testimonial-wrapper .ef-testimonial-item.style-two.active {
+  width: 350px;
+}
+.testimonial-wrapper .ef-testimonial-item.style-two .testimonial-content .testimonial-img {
+  min-height: 500px;
+}

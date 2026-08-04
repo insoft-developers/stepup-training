@@ -1,0 +1,56 @@
+
+/*----------------------------------------------------------------------------------- 
+Template Name: Edufit - Education & Online Course HTML Template
+URI: site.com
+Description:
+EduFit is a modern, responsive HTML template designed specifically for educational websites. Perfect for online courses, universities, and e-learning platforms, EduFit offers a clean and professional design, ensuring a user-friendly experience across all devices. With stunning course displays, customizable layouts, and easy-to-navigate features, EduFit provides all the tools you need to create an engaging and seamless learning experience. Whether you're an instructor, educational institution, or e-learning business, EduFit helps you present your content effectively and attract new learners.
+Author: Pixelfit
+Author URI: https://themeforest.net/user/pixelfit
+Version: 1.0
+
+------------------------------------------------------
+   CSS INDEX
+-----------------------------------------------------
+
+    01. Abstract CSS 
+
+    02. Base CSS 
+        # Base CSS
+        # Common CSS
+
+    03. Components CSS 
+        # Header CSS
+        # Elements CSS
+            # Edufit Image Box
+            # Edufit Content Box
+            # Edufit Iconic Box
+            # Edufit Iconic Info
+            # Edufit Category
+            # Edufit Course
+            # Edufit Event
+            # Edufit Pricing
+            # Edufit Accordion
+            # Edufit Instructor
+            # Edufit Testimonial
+            # Edufit Blog Post 
+
+        # Footer CSS
+
+
+-------------------------------------------------------    */
+
+// Abstract CSS
+
+@import "abstract";
+
+// Base CSS
+
+@import "base/base";
+@import "base/common";
+
+
+// Components CSS
+
+@import "components/header";
+@import "components/elements";
+@import "components/footer";
