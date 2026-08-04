@@ -8,6 +8,13 @@ class MainController extends Controller
 {
     public function index() 
     {
-        return view('master');
+        $view = 'dashboard';
+        return view('pages.dashboard', compact('view'));
+    }
+
+    public function training($slug) 
+    {
+        $view = 'training';
+        return view('pages.training', compact('view'));
     }
 }
