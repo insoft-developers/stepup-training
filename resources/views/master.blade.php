@@ -31,7 +31,8 @@
     <!--====== Common Style css ======-->
     <link rel="stylesheet" href="{{ asset('template') }}/common/css/common_style.css">
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="{{ asset('template/home') }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('template/pages') }}/assets/css/style.css">
+     <link rel="stylesheet" href="{{ asset('template/home') }}/assets/css/style.css">
 
     @include('css')
 </head>
@@ -152,67 +153,7 @@
             </div>
         </div>
     </header><!--====== End Header Area  ======-->
-    <!--====== Start Hero Section ======-->
-    {{-- <section class="ef-hero-sec"> --}}
-    {{-- <div class="hero-wrapper bg_cover overflow-hidden"
-            style="background-image: url({{ asset('template/home') }}/assets/images/hero/hero_bg1.jpg);">
-            <div class="elements element_one"><span><img
-                        src="{{ asset('template/home') }}/assets/images/hero/shape1.png" alt=""></span></div>
-            <div class="elements element_two"><span><img
-                        src="{{ asset('template/home') }}/assets/images/hero/shape2.png" alt=""></span></div>
-            <div class="elements element_three"><span><img
-                        src="{{ asset('template/home') }}/assets/images/hero/shape6.png" alt=""></span></div>
-            <svg class="lineanm" viewBox="0 0 294 501" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="line"
-                    d="M2 -3C20.3006 68.6667 91.54 225.8 230.092 273C250.057 279.801 284.595 286.7 292.98 237.5C302.595 181.084 241.649 210.501 218.793 278.664C214.563 291.278 213.395 304.681 214.074 317.969C216.016 355.979 226.193 422.625 279.005 500"
-                    stroke="#6255FA" stroke-width="3" />
-            </svg>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!--===  Hero Content  ===-->
-                        <div class="hero-content">
-                            <span class="sub-heading" data-aos="fade-up" data-aos-duration="800"><i
-                                    class="flaticon-mortarboard-1"></i>Elevate Your Leader Skills </span>
-                            <h1 data-aos="fade-up" data-aos-delay="10" data-aos-duration="1000">Best Platform <span
-                                    class="c1">Improve<span class="shape-one"><img
-                                            src="{{ asset('template/home') }}/assets/images/hero/shape3.png"
-                                            alt="shape"></span></span> Your <span class="c2">Learning </span>
-                                Skills. <span class="shape-two"><img
-                                        src="{{ asset('template/home') }}/assets/images/hero/shape4.png"
-                                        alt="shape"></span></h1>
-                            <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1200">Executive-level
-                                management training designed for business leaders who demand measurable results.</p>
-                            <!--=== Hero Subscribe ===-->
-                            <div class="hero-subscribe" data-aos="fade-up" data-aos-delay="30"
-                                data-aos-duration="1400">
-
-                                <div class="form-group">
-                                    <button class="theme-btn style-one">Get Started</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!--===  Hero Image Box  ===-->
-                        <div class="hero-image-box">
-                            <!--===  Hero Image  ===-->
-                            <div class="hero-img image_one" data-aos="fade-up" data-aos-delay="10"
-                                data-aos-duration="700">
-                                <img src="{{ asset('images/hero300.png') }}" alt="chart">
-                            </div>
-                            <!--===  Iconic Box  ===-->
-
-                            <!--===  Hero Image  ===-->
-                            <img src="{{ asset('images/header_pp.png') }}" data-aos="fade-up" data-aos-delay="10"
-                                data-aos-duration="700" alt="Shape">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-    {{-- </section> --}}
+    
     <!--====== Start About Section ======-->
     @yield('content')
     <footer class="footer-default">

@@ -34,7 +34,11 @@
         margin-bottom: -50px !important;
     }
 
-    @if($view == 'dashboard')
+    .adjust-margin4 {
+        padding-top: 30px !important;
+        
+    }
+
     .client-icon img {
         width: 100px;
         height: 100px;
@@ -251,23 +255,11 @@
         font-size: 16px;
     }
 
-    .custom-control {
-        padding: 10px;
-        border-radius: 7px;
-        font-size: 17px;
-        border: 2px solid whitesmoke;
-        margin-bottom: 14px;
-    }
+    
 
-    .contact-wrapper {
-        padding: 44px;
-        margin-top: 71px;
-        background: whitesmoke;
-        border-radius: 10px;
-    }
+   
 
 
-    @endif
 
 
     .footer-contact-widget .contact-description {
@@ -332,4 +324,73 @@
     .footer-contact-list .contact-info a:hover {
         color: #246bfd;
     }
+
+
+    .hero-training-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 22px 0 20px;
+}
+
+.hero-training-info .training-info-item {
+    display: flex;
+    min-width: 230px;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 16px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(20, 84, 172, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(20, 40, 80, 0.08);
+}
+
+.hero-training-info .training-info-icon {
+    display: flex;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 15px;
+    background: #1469d2;
+    border-radius: 9px;
+}
+
+.hero-training-info .training-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-training-info .training-info-label {
+    margin-bottom: 2px;
+    color: #747d8c;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hero-training-info .training-info-content strong {
+    color: #17233d;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.hero-content > p {
+    margin-top: 0;
+}
+
+@media (max-width: 575px) {
+    .hero-training-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-training-info .training-info-item {
+        width: 100%;
+        min-width: 0;
+    }
+}
 </style>
