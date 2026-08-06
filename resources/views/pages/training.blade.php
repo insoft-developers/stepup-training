@@ -1,6 +1,6 @@
  @extends('master')
  @section('content')
-     <section class="ef-hero-sec adjust-margin4">
+     <section class="ef-hero-sec pt-10 pb-0">
          <div class="hero-wrapper bg_cover overflow-hidden"
              style="background-image: url({{ asset('template/home') }}/assets/images/hero/hero_bg1.jpg);">
              <div class="elements element_one"><span><img src="{{ asset('template/home') }}/assets/images/hero/shape1.png"
@@ -91,7 +91,7 @@
      <section id="client" class="ef-category-sec gray-bg pt-50 pb-100 ">
          <div class="container">
              <div class="row">
-                 <div class="col-lg-11">
+                 <div class="col-lg-12">
                      <!--=== Section Title ===-->
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
@@ -214,93 +214,189 @@
      </section><!--====== End Category Section ======-->
 
 
-     <section id="problem" class="ef-course-details-sec pt-50 pb-100">
+     <section id="problem" class="pt-100 pb-100">
+
          <div class="container">
-             <div class="row">
-                 <div class="col-lg-11">
-                     <!--=== Section Title ===-->
-                     <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <span class="sub-heading"></span>
-                         <h2>Menjawab Masalah Apa?
 
-                         </h2>
-                     </div>
-                     <div class="edufit-content-box">
-                         <p>Include a concise marketing strategy, key financial projections, and a basic outline of
-                             operational needs. Keep it simple, focused, and easy to read, allowing you to present your
-                             business idea effectively while leaving room for future adjustments as your company grows.</p>
-                         <p>Writing the ultimate 1-page business plan for your upcoming company is about focusing on the
-                             essentials. Start with a clear vision and mission statement that outlines your purpose and
-                             goals. Identify your target market, and briefly describe the products or services you will
-                             offer. Highlight your unique value proposition—what sets you apart from competitors.</p>
-                         <h4>What You’ll Learn From This Course</h4>
-                         <ul class="check-list style-two">
-                             <li><i class="flaticon-check-2"></i>Master the basic principles and terminology of the
-                                 subject.</li>
-                             <li><i class="flaticon-check-2"></i>Learn how to present and apply your knowledge in
-                                 professional settings</li>
-                             <li><i class="flaticon-check-2"></i>Explore more complex topics and deepen your expertise as
-                                 you progress.</li>
-                             <li><i class="flaticon-check-2"></i>Develop critical thinking and troubleshooting skills for
-                                 real-world scenarios.</li>
-                             <li><i class="flaticon-check-2"></i>Gain hands-on experience with tools, techniques, and
-                                 real-world applications.</li>
-                         </ul>
-
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
-                     </div>
+             <div class="row justify-content-center mb-5">
+                 <div class="col-lg-8 text-center">
+                     <span class="text-primary fw-bold">WHY THIS TRAINING?</span>
+                     <h2>Masalah yang Sering Dihadapi</h2>
+                     <p class="text-muted">
+                         Banyak tenaga penjualan memiliki produk yang bagus,
+                         namun kesulitan menghasilkan penjualan yang konsisten.
+                     </p>
                  </div>
              </div>
 
-         </div>
-     </section><!--====== End Category Section ======-->
+             <div class="row g-4">
 
-     <section id="manfaat" class="ef-course-details-sec pt-50 pb-100 gray-bg">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-11">
-                     <!--=== Section Title ===-->
-                     <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <span class="sub-heading"></span>
-                         <h2>Manfaat Yang Anda Peroleh?
+                 <div class="col-lg-4">
+                     <div class="problem-card">
+                         <div class="icon">
+                             <i class="fa fa-times-circle"></i>
+                         </div>
 
-                         </h2>
-                     </div>
-                     <div class="edufit-content-box">
-                         <h4>What You’ll Learn From This Course</h4>
-                         <ul class="check-list">
-                             <li><i class="flaticon-check-2"></i>Master the basic principles and terminology of the
-                                 subject.</li>
-                             <li><i class="flaticon-check-2"></i>Learn how to present and apply your knowledge in
-                                 professional settings</li>
-                             <li><i class="flaticon-check-2"></i>Explore more complex topics and deepen your expertise as
-                                 you progress.</li>
-                             <li><i class="flaticon-check-2"></i>Develop critical thinking and troubleshooting skills for
-                                 real-world scenarios.</li>
-                             <li><i class="flaticon-check-2"></i>Gain hands-on experience with tools, techniques, and
-                                 real-world applications.</li>
-                         </ul>
+                         <h5>Sulit Closing</h5>
 
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
+                         <p>
+                             Presentasi sudah dilakukan tetapi pelanggan
+                             belum mengambil keputusan.
+                         </p>
                      </div>
                  </div>
+
+                 <div class="col-lg-4">
+                     <div class="problem-card">
+                         <div class="icon">
+                             <i class="fa fa-comments"></i>
+                         </div>
+
+                         <h5>Komunikasi Kurang Efektif</h5>
+
+                         <p>
+                             Sulit menggali kebutuhan sehingga solusi
+                             yang ditawarkan kurang tepat.
+                         </p>
+                     </div>
+                 </div>
+
+                 <div class="col-lg-4">
+                     <div class="problem-card">
+                         <div class="icon">
+                             <i class="fa fa-chart-line"></i>
+                         </div>
+
+                         <h5>Target Tidak Tercapai</h5>
+
+                         <p>
+                             Penjualan stagnan dan performa tim belum
+                             sesuai harapan perusahaan.
+                         </p>
+                     </div>
+                 </div>
+
              </div>
 
          </div>
-     </section><!--====== End Category Section ======-->
+
+     </section>
+
+     <section id="manfaat" class="pt-100 pb-100 bg-light">
+
+         <div class="container">
+
+             <div class="row justify-content-center mb-5">
+
+                 <div class="col-lg-8 text-center">
+
+                     <span class="text-primary fw-bold">
+                         BENEFIT
+                     </span>
+
+                     <h2>
+                         Manfaat Yang Akan Anda Peroleh
+                     </h2>
+
+                     <p class="text-muted">
+                         Setelah mengikuti pelatihan, peserta akan memiliki
+                         kemampuan yang dapat langsung diterapkan.
+                     </p>
+
+                 </div>
+
+             </div>
+
+             <div class="row g-4">
+
+                 <div class="col-lg-6">
+
+                     <div class="benefit-item">
+
+                         <i class="fa fa-check-circle"></i>
+
+                         <div>
+
+                             <h5>Teknik Closing yang Efektif</h5>
+
+                             <p>
+                                 Meningkatkan peluang closing melalui pendekatan yang tepat.
+                             </p>
+
+                         </div>
+
+                     </div>
+
+                 </div>
+
+                 <div class="col-lg-6">
+
+                     <div class="benefit-item">
+
+                         <i class="fa fa-check-circle"></i>
+
+                         <div>
+
+                             <h5>Komunikasi Lebih Percaya Diri</h5>
+
+                             <p>
+                                 Mampu membangun hubungan dengan calon pelanggan.
+                             </p>
+
+                         </div>
+
+                     </div>
+
+                 </div>
+
+                 <div class="col-lg-6">
+
+                     <div class="benefit-item">
+
+                         <i class="fa fa-check-circle"></i>
+
+                         <div>
+
+                             <h5>Meningkatkan Produktivitas Sales</h5>
+
+                             <p>
+                                 Memiliki proses penjualan yang lebih terstruktur.
+                             </p>
+
+                         </div>
+
+                     </div>
+
+                 </div>
+
+                 <div class="col-lg-6">
+
+                     <div class="benefit-item">
+
+                         <i class="fa fa-check-circle"></i>
+
+                         <div>
+
+                             <h5>Siap Diterapkan di Lapangan</h5>
+
+                             <p>
+                                 Materi berbasis studi kasus sehingga mudah dipraktikkan.
+                             </p>
+
+                         </div>
+
+                     </div>
+
+                 </div>
+
+             </div>
+
+         </div>
+
+     </section>
 
      <!--====== Start Why Choose Section ======-->
-     <section class="ef-why-choose-sec pt-100 pb-100 dark-custom-color">
+     <section id="kenapa" class="ef-why-choose-sec pt-100 pb-100 dark-custom-color">
          <div class="container">
              <div class="row">
                  <div class="col-lg-12">
@@ -312,7 +408,7 @@
                  </div>
              </div>
              <div class="row">
-                 <div class="col-lg-11">
+                 <div class="col-lg-12">
                      <div class="edufit-content-box">
                          <h3>Tentang World Class Manager</h3>
                          <br>
@@ -414,127 +510,267 @@
          </div>
      </section><!--====== End Why Choose Section ======-->
 
-     <section class="ef-faq-sec pt-90 pb-100">
+    <section id="belajar-apa" class="pt-100 pb-100 bg-light">
+
+    <div class="container">
+
+        <div class="row justify-content-center mb-5">
+
+            <div class="col-lg-8 text-center">
+
+                <span class="text-primary fw-bold">
+                    COURSE CURRICULUM
+                </span>
+
+                <h2 class="mt-2">
+                    Apa yang Akan Anda Pelajari
+                </h2>
+
+                <p class="text-muted">
+                    Materi disusun secara sistematis mulai dari membangun mindset,
+                    memahami pelanggan, hingga meningkatkan kemampuan closing.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="accordion modern-accordion" id="courseAccordion">
+
+            <!-- Item -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#item1">
+
+                        <span class="number">01</span>
+
+                        <div>
+
+                            <h5>Kualifikasi Prospek</h5>
+
+                            <small>
+                                Menentukan calon pelanggan yang benar-benar potensial.
+                            </small>
+
+                        </div>
+
+                    </button>
+
+                </h2>
+
+                <div id="item1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#courseAccordion">
+
+                    <div class="accordion-body">
+
+                        <ul class="course-list">
+                            <li>✔ Menentukan target market</li>
+                            <li>✔ Mengenali customer ideal</li>
+                            <li>✔ Teknik qualifying prospect</li>
+                            <li>✔ Prioritas peluang penjualan</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#item2">
+
+                        <span class="number">02</span>
+
+                        <div>
+
+                            <h5>Membangun Hubungan</h5>
+
+                            <small>
+                                Membangun kepercayaan pelanggan.
+                            </small>
+
+                        </div>
+
+                    </button>
+
+                </h2>
+
+                <div id="item2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseAccordion">
+
+                    <div class="accordion-body">
+
+                        <ul class="course-list">
+                            <li>✔ Teknik komunikasi efektif</li>
+                            <li>✔ Active Listening</li>
+                            <li>✔ Membangun trust</li>
+                            <li>✔ Menangani keberatan</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#item3">
+
+                        <span class="number">03</span>
+
+                        <div>
+
+                            <h5>Konversi Penjualan</h5>
+
+                            <small>
+                                Mengubah prospek menjadi pelanggan.
+                            </small>
+
+                        </div>
+
+                    </button>
+
+                </h2>
+
+                <div id="item3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#courseAccordion">
+
+                    <div class="accordion-body">
+
+                        <ul class="course-list">
+                            <li>✔ Teknik closing</li>
+                            <li>✔ Follow up efektif</li>
+                            <li>✔ Upselling & Cross Selling</li>
+                            <li>✔ Customer Retention</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+     <section id="outline" class="pt-100 pb-100 bg-white">
          <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <!--==== Section Title ====-->
-                     <div class="section-title style-two text-center mb-50" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
 
-                         <h2>Apa Yang Anda Akan Pelajari</h2>
-                     </div>
+             <div class="row justify-content-center mb-5">
+                 <div class="col-lg-8 text-center">
+                     <span class="text-primary fw-bold">TRAINING OUTLINE</span>
+                     <h2>Materi Pelatihan 3 Hari</h2>
+                     <p class="text-muted">
+                         Kurikulum dirancang secara sistematis agar peserta memahami proses
+                         penjualan dari dasar hingga mampu melakukan closing secara efektif.
+                     </p>
                  </div>
              </div>
-             <div class="row">
-                 <div class="col-xl-11">
-                     <!--====== Accordion  ======-->
-                     <div class="accordion" id="accordionOne" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <!--====== Accordion Item  ======-->
-                         <div class="ef-accordion-item mb-15">
-                             <div class="accordion-header">
-                                 <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                     aria-expanded="true">
-                                     Kualifikasi Prospek
-                                 </h6>
-                             </div>
-                             <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionOne">
-                                 <div class="accordion-content">
-                                     <p>We offer a diverse selection of languages, including Spanish, French, German,
-                                         Mandarin, Japanese, Italian, Arabic, Portuguese, Russian, and English. Our courses
-                                         cater to all levels, from beginners to advanced learners.</p>
-                                 </div>
-                             </div>
-                         </div>
-                         <!--====== Accordion Item  ======-->
-                         <div class="ef-accordion-item mb-15">
-                             <div class="accordion-header">
-                                 <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                     aria-expanded="false">
-                                     Membangun Hubungan
-                                 </h6>
-                             </div>
-                             <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-                                 <div class="accordion-content">
-                                     <p>We offer a diverse selection of languages, including Spanish, French, German,
-                                         Mandarin, Japanese, Italian, Arabic, Portuguese, Russian, and English. Our courses
-                                         cater to all levels, from beginners to advanced learners.</p>
-                                 </div>
-                             </div>
-                         </div>
-                         <!--====== Accordion Item  ======-->
-                         <div class="ef-accordion-item mb-15">
-                             <div class="accordion-header">
-                                 <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                     aria-expanded="false">
-                                     Konversi Penjualan
-                                 </h6>
-                             </div>
-                             <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-                                 <div class="accordion-content">
-                                     <p>We offer a diverse selection of languages, including Spanish, French, German,
-                                         Mandarin, Japanese, Italian, Arabic, Portuguese, Russian, and English. Our courses
-                                         cater to all levels, from beginners to advanced learners.</p>
-                                 </div>
-                             </div>
+
+             <div class="timeline">
+
+                 <!-- Hari 1 -->
+                 <div class="timeline-item">
+
+                     <div class="timeline-icon">
+                         <span>1</span>
+                     </div>
+
+                     <div class="timeline-content">
+
+                         <div class="day-badge">
+                             Hari Pertama
                          </div>
 
+                         <h4>Fundamental Penjualan</h4>
+
+                         <p>
+                             Memahami mindset seorang sales profesional, proses penjualan,
+                             komunikasi yang efektif, serta membangun kepercayaan pelanggan.
+                         </p>
+
                      </div>
+
                  </div>
 
-             </div>
-         </div>
-     </section><!--======  End Faq Section  ======-->
+                 <!-- Hari 2 -->
+                 <div class="timeline-item">
 
-     <section id="outline" class="ef-course-details-sec pt-50 pb-100 gray-bg">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-11">
-                     <!--=== Section Title ===-->
-                     <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <span class="sub-heading"></span>
-                         <h2>Outline
-
-                         </h2>
+                     <div class="timeline-icon">
+                         <span>2</span>
                      </div>
-                     <div class="edufit-content-box">
-                         <h3>Hari Pertama - Fundamental Penjualan</h3>
 
+                     <div class="timeline-content">
 
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
+                         <div class="day-badge">
+                             Hari Kedua
+                         </div>
 
+                         <h4>Kualifikasi & Menggali Kebutuhan</h4>
 
-                         <h3>Hari Kedua - Kualifikasi dan Menggali Kebutuhan</h3>
+                         <p>
+                             Teknik menggali kebutuhan pelanggan, memahami pain point,
+                             melakukan presentasi solusi, dan menangani keberatan pelanggan.
+                         </p>
 
-
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
-
-                         <h3>Hari Ketiga - Penutupan & Pertumbuhan Diri</h3>
-
-
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
                      </div>
+
                  </div>
+
+                 <!-- Hari 3 -->
+                 <div class="timeline-item">
+
+                     <div class="timeline-icon">
+                         <span>3</span>
+                     </div>
+
+                     <div class="timeline-content">
+
+                         <div class="day-badge">
+                             Hari Ketiga
+                         </div>
+
+                         <h4>Closing & Personal Growth</h4>
+
+                         <p>
+                             Strategi closing yang elegan, teknik follow-up, membangun
+                             hubungan jangka panjang, dan pengembangan mental seorang sales.
+                         </p>
+
+                     </div>
+
+                 </div>
+
              </div>
 
          </div>
-     </section><!--====== End Category Section ======-->
+     </section>
 
-     <section class="ef-why-choose-sec pt-100 pb-100 dark-custom-color">
+     <section id="wajib-ikut" class="ef-why-choose-sec pt-100 pb-100 dark-custom-color">
          <div class="container">
              <div class="row">
                  <div class="col-lg-12">
@@ -612,7 +848,7 @@
      </section><!--====== End Why Choose Section ======-->
 
      <!--====== Start Testimonial Section ======-->
-     <section class="ef-testimonial-sec pt-100 pb-100">
+     <section id="testimoni" class="ef-testimonial-sec pt-100 pb-100">
          <div class="container">
              <div class="row">
                  <div class="col-lg-12">
@@ -718,188 +954,197 @@
      </section><!--====== End Testimonial Section ======-->
 
 
-     <section class="ef-pricing-sec pt-100 pb-100 gray-bg">
+     <section id="harga" class="pt-100 pb-100 gray-bg">
          <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <!--====  Section Title  ===-->
-                     <div class="section-title text-center mb-55" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <span class="sub-heading">
-                             <h2>Biaya Investasi</h2>
-                     </div>
+
+             <div class="row justify-content-center mb-5">
+                 <div class="col-lg-8 text-center">
+                     <span class="text-primary fw-bold">INVESTASI TRAINING</span>
+                     <h2 class="mt-2">Pilih Paket Terbaik Anda</h2>
+                     <p class="text-muted">
+                         Semua paket sudah termasuk fasilitas training, seminar kit, sertifikat,
+                         coffee break, dan makan siang.
+                     </p>
                  </div>
              </div>
-             <div class="row">
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--====  Pricing Item  ===-->
-                     <div class="ef-pricing-item style-one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="pricing-top">
-                             <div class="pce-title">
-                                 <h4>Min5</h4>
-                             </div>
 
+             <div class="row g-4">
+
+                 <!-- Paket Group -->
+                 <div class="col-lg-4">
+
+                     <div class="price-card">
+
+                         <div class="price-header">
+                             <h4>👥 Group (Min. 5 Peserta)</h4>
                          </div>
-                         <div class="pricing-body">
 
-                             <ul class="check-list style-one">
-                                 <li class="check"><i class="flaticon-check-2"></i>Min 5 Orang Early Bird <br>Rp.
-                                     4.995.000</li>
-                                 <li class="check"><i class="flaticon-check-2"></i>Min 5 Orang Reguler <br>Rp. 6.995.000
-                                 </li>
-
-                             </ul>
+                         <div class="price-item">
+                             <span class="badge-price">EARLY BIRD</span>
+                             <h2>Rp4.995.000</h2>
+                             <p>/orang</p>
                          </div>
-                         <div class="pricing-footer">
-                             <a href="pricing.html" class="theme-btn style-one">Order</a>
 
+                         <hr>
+
+                         <div class="price-item">
+                             <span class="badge-price gray">REGULER</span>
+                             <h3>Rp6.995.000</h3>
+                             <p>/orang</p>
                          </div>
+
+                         <a href="#" class="theme-btn style-one w-100 mt-4">
+                             Order Sekarang
+                         </a>
+
                      </div>
+
                  </div>
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--====  Pricing Item  ===-->
-                     <div class="ef-pricing-item style-one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="pricing-top">
-                             <div class="pce-title">
-                                 <h4>Individual</h4>
-                             </div>
 
+                 <!-- Individual -->
+                 <div class="col-lg-4">
+
+                     <div class="price-card featured">
+
+                         <div class="recommended">
+                             PALING POPULER
                          </div>
-                         <div class="pricing-body">
 
-                             <ul class="check-list style-one">
-                                 <li class="check"><i class="flaticon-check-2"></i>Individu Early Bird <br>Rp. 4.995.000
-                                 </li>
-                                 <li class="check"><i class="flaticon-check-2"></i>Individu Reguler <br>Rp. 6.995.000
-                                 </li>
-
-                             </ul>
+                         <div class="price-header">
+                             <h4>👤 Individual</h4>
                          </div>
-                         <div class="pricing-footer">
-                             <a href="pricing.html" class="theme-btn style-one">Order</a>
 
+                         <div class="price-item">
+                             <span class="badge-price">EARLY BIRD</span>
+                             <h2>Rp4.995.000</h2>
+                             <p>/peserta</p>
                          </div>
+
+                         <hr>
+
+                         <div class="price-item">
+                             <span class="badge-price gray">REGULER</span>
+                             <h3>Rp6.995.000</h3>
+                             <p>/peserta</p>
+                         </div>
+
+                         <a href="#" class="theme-btn style-one w-100 mt-4">
+                             Order Sekarang
+                         </a>
+
                      </div>
+
                  </div>
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--====  Pricing Item  ===-->
-                     <div class="ef-pricing-item style-one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="pricing-top">
-                             <div class="pce-title">
-                                 <h4>Reseat</h4>
-                             </div>
 
+                 <!-- Reseat -->
+                 <div class="col-lg-4">
+
+                     <div class="price-card">
+
+                         <div class="price-header">
+                             <h4>🔄 Reseat</h4>
                          </div>
-                         <div class="pricing-body">
 
-                             <ul class="check-list style-one">
-                                 <li class="check"><i class="flaticon-check-2"></i>Min 5 Orang Early Bird <br>Rp.
-                                     4.995.000</li>
-                                 <li class="check"><i class="flaticon-check-2"></i>Min 5 Orang Reguler <br>Rp. 6.995.000
-                                 </li>
-
-                             </ul>
+                         <div class="price-item">
+                             <span class="badge-price">EARLY BIRD</span>
+                             <h2>Rp4.995.000</h2>
+                             <p>/peserta</p>
                          </div>
-                         <div class="pricing-footer">
-                             <a href="pricing.html" class="theme-btn style-one">Order</a>
 
+                         <hr>
+
+                         <div class="price-item">
+                             <span class="badge-price gray">REGULER</span>
+                             <h3>Rp6.995.000</h3>
+                             <p>/peserta</p>
                          </div>
+
+                         <a href="#" class="theme-btn style-one w-100 mt-4">
+                             Order Sekarang
+                         </a>
+
                      </div>
+
                  </div>
 
              </div>
+
          </div>
-     </section><!--======  End Pricing Section  ======-->
+     </section>
 
-     <section id="client" class="ef-category-sec pt-50 pb-100 ">
+     <section id="fasilitas" class="pt-70 pb-100 bg-white">
          <div class="container">
-             <div class="row">
-                 <div class="col-lg-11">
-                     <!--=== Section Title ===-->
-                     <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <span class="sub-heading"></span>
-                         <h2>Facility (Include)
 
-                         </h2>
-                     </div>
-                 </div>
-             </div>
              <div class="row justify-content-center">
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-
-                         <div class="content">
-                             <h4>Program Tatap Muka</h4> <i style="font-size: 20px;" class="fa fa-handshake"></i>
-
-                         </div>
-                     </a>
+                 <div class="col-lg-8">
+                     <div class="section-title text-center mb-5">
+                         <span class="text-primary fw-bold">WHAT YOU GET</span>
+                         <h2 class="mt-2">Facilities Included</h2>
+                         <p class="text-muted">
+                             Every participant will receive the following facilities during the training.
+                         </p>
+                     </div>
                  </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
+             </div>
 
-                         <div class="content">
-                             <h4>Seminar Kit</h4> <i style="font-size: 20px;" class="fa fa-poll-people"></i>
+             <div class="row g-4 justify-content-center">
 
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="facility-card">
+                         <div class="icon">
+                             <i class="fa fa-handshake"></i>
                          </div>
-                     </a>
+                         <h5>Program Tatap Muka</h5>
+                     </div>
                  </div>
 
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-
-                         <div class="content">
-                             <h4>Sertifikat</h4>
-                             <i style="font-size: 20px;" class="fa fa-file-certificate"></i>
-
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="facility-card">
+                         <div class="icon">
+                             <i class="fa fa-poll-people"></i>
                          </div>
-                     </a>
+                         <h5>Seminar Kit</h5>
+                     </div>
                  </div>
 
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-
-                         <div class="content">
-                             <h4>2x Coffe Break</h4><i style="font-size: 20px;" class="fa fa-coffee"></i>
-
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="facility-card">
+                         <div class="icon">
+                             <i class="fa fa-file-certificate"></i>
                          </div>
-                     </a>
+                         <h5>Sertifikat</h5>
+                     </div>
                  </div>
 
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-
-                         <div class="content">
-                             <h4>Makan Siang</h4><i style="font-size: 20px;" class="fa fa-knife-kitchen"></i>
-
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="facility-card">
+                         <div class="icon">
+                             <i class="fa fa-coffee"></i>
                          </div>
-                     </a>
+                         <h5>2x Coffee Break</h5>
+                     </div>
                  </div>
-                 <div class="col-lg-12">
-                     <div class="form-group">
-                         <center><button class="theme-btn style-one">Order Now</button></center>
+
+                 <div class="col-lg-3 col-md-4 col-sm-6">
+                     <div class="facility-card">
+                         <div class="icon">
+                             <i class="fa fa-utensils"></i>
+                         </div>
+                         <h5>Makan Siang</h5>
                      </div>
                  </div>
 
              </div>
+
+             <div class="text-center mt-5">
+                 <a href="#order" class="theme-btn style-one px-5">
+                     Order Now
+                 </a>
+             </div>
+
          </div>
-     </section><!--====== End Category Section ======-->
+     </section>
+     <div class="right-sidebar">
+
+     </div>
  @endsection

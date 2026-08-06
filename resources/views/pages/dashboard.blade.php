@@ -2,7 +2,7 @@
  @section('content')
      <!--====== Start Hero Section ======-->
      
-     <section id="about" class="ef-about-sec pt-130 pb-80 adjust-margin">
+     <section id="about" class="ef-about-sec pt-10 pb-80">
          <div class="container">
              <div class="row align-items-center">
                  <div class="col-xl-6">

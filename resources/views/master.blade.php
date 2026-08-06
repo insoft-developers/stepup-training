@@ -113,6 +113,24 @@
                                     <li class="menu-item has-children"><a href="{{ url('/') }}">Home</a>
 
                                     </li>
+                                    @if($view == 'training')
+                                     <li class="menu-item has-children"><a href="#manfaat">Benefit</a>
+
+                                    </li>
+                                     <li class="menu-item has-children"><a href="#belajar-apa">Learn</a>
+
+                                    </li>
+                                     <li class="menu-item has-children"><a href="#outline">Outline</a>
+
+                                    </li>
+                                     <li class="menu-item has-children"><a href="#harga">Price</a>
+
+                                    </li>
+                                     <li class="menu-item has-children"><a href="#fasilitas">Facility</a>
+
+                                    </li>
+
+                                    @else
                                     <li class="menu-item has-children"><a href="#about">About</a>
 
                                     </li>
@@ -124,6 +142,8 @@
                                     </li>
                                     <li class="menu-item"><a href="#contact">Contact
                                             Us</a></li>
+                                    @endif
+                                    
                                 </ul>
                             </nav>
                             <!--=== Edufit Nav Button ===-->
