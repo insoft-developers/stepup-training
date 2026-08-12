@@ -1,3 +1,7 @@
+@php
+    $data = \App\Models\Information::first();
+
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,7 +12,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--====== Title ======-->
-    <title>StepupTraining.id - Education & Online Leadership Training Course</title>
+    <title>{{ $data->title }}</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
     <!--====== Google Fonts ======-->
@@ -69,8 +73,8 @@
                         <!--===  Top Bar Left  ===-->
                         <div class="top-left">
                             <span><i class="flaticon-email"></i><a
-                                    href="mailto:info@edufit.com">info@stepuptraining.id</a></span>
-                            <span><i class="flaticon-pin-map"></i>15/A,Blitar, Surabaya</span>
+                                    href="mailto:{{ $data->email }}">{{ $data->email }}</a></span>
+                            <span><i class="flaticon-pin-map"></i>{{ str_replace("<br>", " ", $data->address) }}</span>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -200,14 +204,12 @@
                                     <a href="{{ url('/') }}"><img src="{{ asset('images/logo_black.png') }}"
                                             alt="Brand Logo"></a>
                                 </div>
-                                <p>StepupTraning.id offers interactive modules, live sessions, and certifications,
-                                    empowering
-                                    learners with personalized content for professional and personal growth.</p>
+                                <p>{{ $data->footer_title }}</p>
                                 <ul class="social-link">
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                                    <li><a href="{{ $data->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="{{ $data->instagram }}"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{ $data->youtube }}"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="{{ $data->tiktok }}"><i class="fab fa-tiktok"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -260,8 +262,7 @@
                                 <h4 class="widget-title">Contact Us</h4>
 
                                 <p class="contact-description">
-                                    Hubungi StepUp Training untuk konsultasi program pelatihan
-                                    individu maupun perusahaan.
+                                    {{ $data->footer_contact_title ?? '' }}
                                 </p>
 
                                 <ul class="footer-contact-list">
@@ -274,8 +275,7 @@
                                         <div class="contact-info">
                                             <span>Alamat</span>
                                             <p>
-                                                Jl. Nama Jalan No. 123,<br>
-                                                Jakarta, Indonesia
+                                                {!! $data->address !!}
                                             </p>
                                         </div>
                                     </li>
@@ -289,8 +289,8 @@
                                         <div class="contact-info">
                                             <span>Email</span>
                                             <p>
-                                                <a href="mailto:info@stepuptraining.id">
-                                                    info@stepuptraining.id
+                                                <a href="mailto:{{ $data->email }}">
+                                                    {{ $data->email }}
                                                 </a>
                                             </p>
                                         </div>
@@ -305,9 +305,9 @@
                                         <div class="contact-info">
                                             <span>Telepon/WhatsApp</span>
                                             <p>
-                                                <a href="https://wa.me/6281234567890" target="_blank"
+                                                <a href="https://wa.me/{{ $data->whatsapp }}" target="_blank"
                                                     rel="noopener noreferrer">
-                                                    +62 812-3456-7890
+                                                    {{ $data->whatsapp }}
                                                 </a>
                                             </p>
                                         </div>

@@ -16,7 +16,7 @@
                                      alt="shape"></span></div>
                          <!--====== Edufit Image =====-->
                          <div class="edufit-img image_one" data-aos="fade-up" data-aos-delay="10" data-aos-duration="700">
-                             <img src="{{ asset('images/ppabout2.png') }}" alt="About Image">
+                             <img src="{{ asset('storage') }}/{{ $about->image }}" alt="About Image">
                          </div>
                          <!--====== Edufit Image =====-->
 
@@ -39,14 +39,10 @@
                          <!--====== Section Title =====-->
                          <div class="section-title style-one mb-30" data-aos="fade-up" data-aos-delay="10"
                              data-aos-duration="800">
-                             <span class="sub-heading"><i class="flaticon-mortarboard-1"></i>About
-                                 Stepuptraining.id</span>
-                             <h2>Empowering People <span>to Step Up</span> and Lead</h2>
+                             <span class="sub-heading"><i class="flaticon-mortarboard-1"></i>{{ $about->small_title }}</span>
+                             <h2>{!! $about->title_text !!}</h2>
                          </div>
-                         <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1000">StepUp Training provides
-                             practical and engaging training programs designed to strengthen leadership, communication,
-                             teamwork, and professional skills. We help individuals and organizations unlock their
-                             potential, improve performance, and create sustainable growth.</p>
+                         <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1000">{{ $about->about_text ?? '' }}</p>
                          <div class="row">
                              <div class="col-md-6">
                                  <!--====== Iconic Box =====-->
@@ -56,8 +52,8 @@
                                          <i class="flaticon-virtual-event"></i>
                                      </div>
                                      <div class="content">
-                                         <h5>Interactive Training</h5>
-                                         <p>Practical learning sessions.</p>
+                                         <h5>{{ $about->item_title_1 }}</h5>
+                                         <p>{{ $about->item_subtitle_1 ?? '' }}</p>
                                      </div>
                                  </div>
                              </div>
@@ -69,8 +65,8 @@
                                          <i class="flaticon-learning-support"></i>
                                      </div>
                                      <div class="content">
-                                         <h5>Professional Programs</h5>
-                                         <p>Comprehensive programs.</p>
+                                         <h5>{{ $about->item_title_2 }}</h5>
+                                         <p>{{ $about->item_subtitle_2 ?? '' }}</p>
                                      </div>
                                  </div>
                              </div>
@@ -79,8 +75,7 @@
                          <div class="about-button-box d-flex align-items-center" data-aos="fade-up" data-aos-delay="50"
                              data-aos-duration="1600">
                              <div class="about-button">
-                                 <a href="#" class="theme-btn style-one">Get
-                                     Started Now</a>
+                                 <a href="{{ $about->cta_link ?? '#' }}" target="_blank" class="theme-btn style-one">{{ $about->cta_text }}</a>
                              </div>
                              {{-- <div class="author-box style-one">
                                 <div class="author-thumb">
@@ -558,8 +553,8 @@
                                      </div>
                                      <div class="content">
                                          <h4>Office Address</h4>
-                                         <p>Blitar, No. 145</p>
-                                         <p>Jawa Timur, 20366</p>
+                                         <p>{!! $data->address !!}</p>
+                                         {{-- <p>Jawa Timur, 20366</p> --}}
                                      </div>
                                  </div>
                              </div>
@@ -574,8 +569,8 @@
                                      </div>
                                      <div class="content">
                                          <h4>Email Address</h4>
-                                         <p><a href="mailto:support@stepuptraining.id">support@stepuptraining.id</a></p>
-                                         <p><a href="mailto:info@edufit.com">info@stepuptraining.id</a></p>
+                                         <p><a href="mailto:{{ $data->email }}">{{ $data->email }}</a></p>
+                                         <p><a href="#"></a></p>
                                      </div>
                                  </div>
                              </div>
@@ -590,8 +585,8 @@
                                      </div>
                                      <div class="content">
                                          <h4>Phone Number</h4>
-                                         <p><a href="tel:+911-800-222-1222">+62-813-1222-1222</a></p>
-                                         <p><a href="tel:+911-888-280-4331">+62-821-3280-4331</a></p>
+                                         <p><a href="#">{{ $data->whatsapp }}</a></p>
+                                         <p><a href="#"></a></p>
                                      </div>
                                  </div>
                              </div>

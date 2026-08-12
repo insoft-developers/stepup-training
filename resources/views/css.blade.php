@@ -781,4 +781,9 @@
 .course-list li:last-child{
     border-bottom:none;
 }
+
+
+#contact h4 {
+    color: black !important;
+}
 </style>
