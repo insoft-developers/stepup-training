@@ -20,13 +20,11 @@
                          <!--===  Hero Content  ===-->
                          <div class="hero-content">
                              <span class="sub-heading" data-aos="fade-up" data-aos-duration="800">
-                                 Management Development Program
+                                 {{ $data->theme ?? '' }}
                              </span>
 
                              <h1 data-aos="fade-up" data-aos-delay="10" data-aos-duration="1000">
-                                 How To Be The
-                                 <span class="c1">World Class</span>
-                                 Manager.
+                                 {!! $data->title !!}
                              </h1>
 
                              <!-- Training Information -->
@@ -40,7 +38,17 @@
 
                                      <div class="training-info-content">
                                          <span class="training-info-label">Date</span>
-                                         <strong>20–21 Agustus 2026</strong>
+                                         <strong>
+
+
+                                             @if ($data->start_at->isSameDay($data->finish_at))
+                                                     {{ $data->start_at->translatedFormat('d F Y') }}
+                                                 @else
+                                                     {{ $data->start_at->format('d') }}
+                                                     –
+                                                     {{ $data->finish_at->translatedFormat('d F Y') }}
+                                                 @endif
+                                         </strong>
                                      </div>
                                  </div>
 
@@ -51,15 +59,13 @@
 
                                      <div class="training-info-content">
                                          <span class="training-info-label">Location</span>
-                                         <strong>Jakarta Convention Center</strong>
+                                         <strong>{{ $data->location ?? '' }}</strong>
                                      </div>
                                  </div>
                              </div>
 
                              <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1200">
-                                 Belajar bagaimana berlatih keterampilan manajerial yang tepat dan benar (deliberate
-                                 practise), sehingga bisa menjadi manajer profesional yang memiliki kualifikasi manajer
-                                 kelas dunia.
+                                 {{ $data->paragraph ?? '' }}
                              </p>
 
                              <div class="hero-subscribe" data-aos="fade-up" data-aos-delay="30" data-aos-duration="1400">
@@ -78,7 +84,7 @@
 
 
                              <!--===  Hero Image  ===-->
-                             <img src="{{ asset('images/header_pp.png') }}" data-aos="fade-up" data-aos-delay="10"
+                             <img src="{{ asset('storage') }}/{{ $data->detail_image }}" data-aos="fade-up" data-aos-delay="10"
                                  data-aos-duration="700" alt="Shape">
                          </div>
                      </div>

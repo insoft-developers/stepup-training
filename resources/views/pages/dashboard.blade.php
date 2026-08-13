@@ -1,7 +1,7 @@
  @extends('master')
  @section('content')
      <!--====== Start Hero Section ======-->
-     
+
      <section id="about" class="ef-about-sec pt-10 pb-80">
          <div class="container">
              <div class="row align-items-center">
@@ -9,8 +9,8 @@
                      <!--====== About Image Box =====-->
                      <div class="edufit-image-box style-one mb-50">
                          <div class="shape shape_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/about/shape1.png"
-                                     alt="shape"></span></div>
+                                     src="{{ asset('template/home') }}/assets/images/about/shape1.png" alt="shape"></span>
+                         </div>
                          <div class="shape shape_two"><span><img
                                      src="{{ asset('template/home') }}/assets/images/about/shape2.png"
                                      alt="shape"></span></div>
@@ -39,10 +39,12 @@
                          <!--====== Section Title =====-->
                          <div class="section-title style-one mb-30" data-aos="fade-up" data-aos-delay="10"
                              data-aos-duration="800">
-                             <span class="sub-heading"><i class="flaticon-mortarboard-1"></i>{{ $about->small_title }}</span>
+                             <span class="sub-heading"><i
+                                     class="flaticon-mortarboard-1"></i>{{ $about->small_title }}</span>
                              <h2>{!! $about->title_text !!}</h2>
                          </div>
-                         <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1000">{{ $about->about_text ?? '' }}</p>
+                         <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1000">{{ $about->about_text ?? '' }}
+                         </p>
                          <div class="row">
                              <div class="col-md-6">
                                  <!--====== Iconic Box =====-->
@@ -75,7 +77,8 @@
                          <div class="about-button-box d-flex align-items-center" data-aos="fade-up" data-aos-delay="50"
                              data-aos-duration="1600">
                              <div class="about-button">
-                                 <a href="{{ $about->cta_link ?? '#' }}" target="_blank" class="theme-btn style-one">{{ $about->cta_text }}</a>
+                                 <a href="{{ $about->cta_link ?? '#' }}" target="_blank"
+                                     class="theme-btn style-one">{{ $about->cta_text }}</a>
                              </div>
                              {{-- <div class="author-box style-one">
                                 <div class="author-thumb">
@@ -102,119 +105,29 @@
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
                          <span class="sub-heading"></span>
-                         <h2>Our Clients
+                         <h2>{{ $data->client_title }}
 
                          </h2>
                      </div>
                  </div>
              </div>
              <div class="row justify-content-center">
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/arunika_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT.Arunika Digital Nusantara</h5>
-                             <span>Teknologi Digital</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_two mb-30" data-aos="fade-up" data-aos-delay="20"
-                         data-aos-duration="1000">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/cpi_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Cakrawala Prima Industri</h5>
-                             <span>Manufaktur</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_three mb-30" data-aos="fade-up"
-                         data-aos-delay="25" data-aos-duration="1100">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/skm_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Sinergi Karya Mandiri</h5>
-                             <span>Konsultasi Bisnis</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_four mb-30" data-aos="fade-up"
-                         data-aos-delay="30" data-aos-duration="1200">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/lfi_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Lentera Finansial</h5>
-                             <span>Keuangan,Investasi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_five mb-30" data-aos="fade-up"
-                         data-aos-delay="35" data-aos-duration="1300">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/nlu_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Nusa Logistik Utama</h5>
-                             <span>Logistik & Distribusi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_six mb-30" data-aos="fade-up"
-                         data-aos-delay="40" data-aos-duration="1400">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/vistara.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Vista Properti Sejahtera</h5>
-                             <span>Properti, Konstruksi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_seven mb-30" data-aos="fade-up"
-                         data-aos-delay="45" data-aos-duration="1500">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/bps_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Bumi Pangan Sentosa</h5>
-                             <span>Pangan & Agribisnis</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50"
-                     data-aos-duration="1600">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_eight mb-30">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/eli_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Elevasi Talenta</h5>
-                             <span>SDM Recruitment</span>
-                         </div>
-                     </a>
-                 </div>
+                 @foreach ($clients as $client)
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                         <!--=== Category Item ===-->
+                         <a href="{{ asset('storage') }}/{{ $client->image }}"
+                             class="ef-category-item style-one {{ $client->color }} mb-30" data-aos="fade-up"
+                             data-aos-delay="15" data-aos-duration="900">
+                             <div class="client-icon">
+                                 <img class="gambar-client" src="{{ asset('storage') }}/{{ $client->image }}">
+                             </div>
+                             <div class="content">
+                                 <h5>{{ $client->name ?? '' }}</h5>
+                                 <span>{{ $client->tagline ?? '' }}</span>
+                             </div>
+                         </a>
+                     </div>
+                 @endforeach
              </div>
          </div>
      </section><!--====== End Category Section ======-->
@@ -231,11 +144,9 @@
                  </div>
              </div>
              <div class="row">
-                 @php
-                     $a = ['1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2'];
-                 @endphp
 
-                 @foreach ($a as $i)
+
+                 @foreach ($trainings as $i)
                      <div class="col-xl-3 col-md-6 col-sm-12">
                          <!-- Course Item -->
                          <div class="ef-course-grid-item style-one training-card mb-30" data-aos="fade-up"
@@ -243,8 +154,8 @@
 
                              <div class="course-thumbnail">
                                  <a href="#">
-                                     <img src="{{ asset('storage/trainings/training_image.png') }}"
-                                         alt="Leadership Training" class="img-fluid">
+                                     <img src="{{ asset('storage') }}/{{ $i->thumb_image }}" alt="Leadership Training"
+                                         class="img-fluid">
                                  </a>
 
 
@@ -253,7 +164,7 @@
                              <div class="course-info">
                                  <h3 class="title">
                                      <a href="#">
-                                         Leadership Excellence Training
+                                         {{ $i->title }}
                                      </a>
                                  </h3>
 
@@ -265,7 +176,16 @@
 
                                          <div class="meta-content">
 
-                                             <span class="meta-value">20–21 Agustus 2026</span>
+                                             <span class="meta-value">
+                                                 @if ($i->start_at->isSameDay($i->finish_at))
+                                                     {{ $i->start_at->translatedFormat('d F Y') }}
+                                                 @else
+                                                     {{ $i->start_at->format('d') }}
+                                                     –
+                                                     {{ $i->finish_at->translatedFormat('d F Y') }}
+                                                 @endif
+
+                                             </span>
                                          </div>
                                      </div>
 
@@ -276,13 +196,13 @@
 
                                          <div class="meta-content">
 
-                                             <span class="meta-value">Jakarta Convention Center </span>
+                                             <span class="meta-value">{{ $i->location }} </span>
                                          </div>
                                      </div>
                                  </div>
 
                                  <div class="course-footer">
-                                     <a href="{{ url('/training/slug') }}"
+                                     <a href="{{ url('/training') }}/{{ $i->slug }}"
                                          class="theme-btn style-one order-training-btn">
                                          <i class="fas fa-shopping-cart"></i>
                                          Order
@@ -324,13 +244,12 @@
                          </span>
 
                          <h2>
-                             Inhouse Training Solutions
+                             {{ $data->inhouse_title }}
 
                          </h2>
 
                          <p class="mt-3">
-                             Program pelatihan yang dirancang khusus berdasarkan
-                             kebutuhan, tantangan, dan tujuan organisasi Anda.
+                             {{ $data->inhouse_subtitle }}
                          </p>
                      </div>
                  </div>
@@ -339,167 +258,62 @@
              <div class="row justify-content-center">
 
                  <!-- Leadership Training -->
-                 <div class="col-xl-4 col-md-6">
-                     <div class="ef-blog-grid-item style-one inhouse-card mb-40" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
+                 @foreach ($inhouses as $item)
+                     <div class="col-xl-4 col-md-6">
+                         <div class="ef-blog-grid-item style-one inhouse-card mb-40" data-aos="fade-up"
+                             data-aos-delay="15" data-aos-duration="900">
 
-                         <div class="post-thumbnail">
-                             <img src="{{ asset('storage/trainings/training_image.png') }}"
-                                 alt="Leadership Development Training">
-                         </div>
-
-                         <div class="post-content">
-                             <div class="post-meta">
-                                 <span>
-                                     <a href="#">Leadership</a>
-                                 </span>
-
-                                 <span>
-                                     <i class="far fa-clock"></i>
-                                     1–2 Hari
-                                 </span>
+                             <div class="post-thumbnail">
+                                 <img src="{{ asset('storage') }}/{{ $item->image }}"
+                                     alt="Leadership Development Training">
                              </div>
 
-                             <h4 class="title">
-                                 <a href="#">
-                                     Leadership Development Program
-                                 </a>
-                             </h4>
+                             <div class="post-content">
+                                 <div class="post-meta">
+                                     <span>
+                                         <a href="#">{{ $item->theme }}</a>
+                                     </span>
 
-                             <p class="training-description">
-                                 Meningkatkan kemampuan memimpin, mengambil keputusan,
-                                 membangun kepercayaan, dan mengelola kinerja tim.
-                             </p>
+                                     <span>
+                                         <i class="far fa-clock"></i>
+                                         {{ $item->duration }}
+                                     </span>
+                                 </div>
 
-                             <div class="training-info">
-                                 <span>
-                                     <i class="far fa-users"></i>
-                                     Minimal 10 Peserta
-                                 </span>
+                                 <h4 class="title">
+                                     <a href="#">
+                                         {{ $item->title }}
+                                     </a>
+                                 </h4>
 
-                                 <span>
-                                     <i class="far fa-map-marker-alt"></i>
-                                     Lokasi Perusahaan
-                                 </span>
-                             </div>
+                                 <p class="training-description">
+                                     {{ $item->paragraph }}
+                                 </p>
 
-                             <div class="inhouse-footer">
-                                 <a href="#" class="theme-btn style-one inhouse-btn">
-                                     Konsultasikan Program
-                                     <i class="far fa-arrow-right"></i>
-                                 </a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
+                                 <div class="training-info">
+                                     <span>
+                                         <i class="far fa-users"></i>
+                                         {{ $item->audience }}
+                                     </span>
 
-                 <!-- Team Building -->
-                 <div class="col-xl-4 col-md-6">
-                     <div class="ef-blog-grid-item style-one inhouse-card mb-40" data-aos="fade-up" data-aos-delay="20"
-                         data-aos-duration="1000">
+                                     <span>
+                                         <i class="far fa-map-marker-alt"></i>
+                                         {{ $item->location }}
+                                     </span>
+                                 </div>
 
-                         <div class="post-thumbnail">
-                             <img src="{{ asset('storage/trainings/training_image.png') }}" alt="Team Building Training">
-                         </div>
-
-                         <div class="post-content">
-                             <div class="post-meta">
-                                 <span>
-                                     <a href="#">Teamwork</a>
-                                 </span>
-
-                                 <span>
-                                     <i class="far fa-clock"></i>
-                                     1 Hari
-                                 </span>
-                             </div>
-
-                             <h4 class="title">
-                                 <a href="#">
-                                     Team Building & Collaboration
-                                 </a>
-                             </h4>
-
-                             <p class="training-description">
-                                 Membangun kerja sama, kepercayaan, komunikasi, dan
-                                 sinergi untuk menciptakan tim yang lebih produktif.
-                             </p>
-
-                             <div class="training-info">
-                                 <span>
-                                     <i class="far fa-users"></i>
-                                     Minimal 15 Peserta
-                                 </span>
-
-                                 <span>
-                                     <i class="far fa-map-marker-alt"></i>
-                                     Indoor atau Outdoor
-                                 </span>
-                             </div>
-
-                             <div class="inhouse-footer">
-                                 <a href="#" class="theme-btn style-one inhouse-btn">
-                                     Konsultasikan Program
-                                     <i class="far fa-arrow-right"></i>
-                                 </a>
+                                 <div class="inhouse-footer">
+                                     <a href="{{ $item->cta_link ?? '#' }}" class="theme-btn style-one inhouse-btn">
+                                         {{ $data->inhouse_traning_buttom_text }}
+                                         <i class="far fa-arrow-right"></i>
+                                     </a>
+                                 </div>
                              </div>
                          </div>
                      </div>
-                 </div>
+                 @endforeach
 
-                 <!-- Communication Training -->
-                 <div class="col-xl-4 col-md-6">
-                     <div class="ef-blog-grid-item style-one inhouse-card mb-40" data-aos="fade-up" data-aos-delay="25"
-                         data-aos-duration="1100">
 
-                         <div class="post-thumbnail">
-                             <img src="{{ asset('storage/trainings/training_image.png') }}" alt="Communication Training">
-                         </div>
-
-                         <div class="post-content">
-                             <div class="post-meta">
-                                 <span>
-                                     <a href="#">Communication</a>
-                                 </span>
-
-                                 <span>
-                                     <i class="far fa-clock"></i>
-                                     1–2 Hari
-                                 </span>
-                             </div>
-
-                             <h4 class="title">
-                                 <a href="#">
-                                     Effective Communication Training
-                                 </a>
-                             </h4>
-
-                             <p class="training-description">
-                                 Mengembangkan kemampuan komunikasi profesional,
-                                 presentasi, pelayanan, dan penyelesaian konflik.
-                             </p>
-
-                             <div class="training-info">
-                                 <span>
-                                     <i class="far fa-users"></i>
-                                     Minimal 10 Peserta
-                                 </span>
-
-                                 <span>
-                                     <i class="far fa-map-marker-alt"></i>
-                                     Lokasi Fleksibel
-                                 </span>
-                             </div>
-
-                             <div class="inhouse-footer">
-                                 <a href="#" class="theme-btn style-one inhouse-btn">
-                                     Konsultasikan Program
-                                     <i class="far fa-arrow-right"></i>
-                                 </a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
 
              </div>
 
@@ -509,12 +323,11 @@
                      <div class="inhouse-bottom-cta text-center" data-aos="fade-up" data-aos-duration="900">
 
                          <p>
-                             Belum menemukan program yang sesuai?
-                             Kami dapat merancang materi khusus untuk organisasi Anda.
+                             {{ $data->custom_text }}
                          </p>
 
-                         <a href="#" class="theme-btn style-one">
-                             Request Custom Training
+                         <a href="{{ $data->custom_cta_link ?? '#' }}" class="theme-btn style-one">
+                             {{ $data->custom_cta_text }}
                              <i class="far fa-arrow-right"></i>
                          </a>
                      </div>
@@ -533,14 +346,12 @@
                          <!--=== Section Title ===-->
                          <div class="section-title style-two mb-20" data-aos="fade-up" data-aos-delay="10"
                              data-aos-duration="800">
-                             <span class="sub-heading"><i class="flaticon-mortarboard-1"></i>Contact Us</span>
-                             <h2>Let us Discuss
-                                 Your <span>Training Needs</span></h2>
+                             <span class="sub-heading"><i
+                                     class="flaticon-mortarboard-1"></i>{{ $contact->small_title ?? '' }}</span>
+                             <h2>{!! $contact->title_text ?? '' !!}</h2>
                          </div>
-                         <p data-aos="fade-up" data-aos-delay="15" data-aos-duration="900">Konsultasikan kebutuhan
-                             pelatihan individu maupun organisasi Anda bersama
-                             StepUp Training. Tim kami siap membantu merancang program yang sesuai dengan
-                             tujuan dan kebutuhan Anda.</p>
+                         <p data-aos="fade-up" data-aos-delay="15" data-aos-duration="900">
+                             {{ $contact->paragraph ?? '' }}</p>
                          <div class="row">
                              <div class="col-xl-12 col-lg-4">
                                  <!--=== Iconic Info Box ===-->
@@ -596,49 +407,53 @@
                  <div class="col-xl-7">
                      <!--=== Contact Wrapper ===-->
                      <div class="contact-wrapper mb-60" data-aos="fade-up" data-aos-duration="1200">
-                         <h2>Send us a message</h2>
-                         <p>Contact us for personalized assistance and quick support anytime.</p>
+                         <h2>{{ $contact->message_header ?? '' }}</h2>
+                         <p>{{ $contact->message_subtitle ?? '' }}</p>
                          <div style="margin-top:20px"></div>
                          <form class="contact-form">
                              <div class="row">
                                  <div class="col-lg-6">
                                      <div class="form-group">
-                                         <label for="name">Name<span>*</span></label>
+                                         <label for="name">{{ $contact->name_label ?? '' }}<span>*</span></label>
                                          <input type="text" class="form_control custom-control"
-                                             placeholder="Enter your name" name="name" required>
+                                             placeholder="{{ $contact->name_placeholder_text ?? '' }}" name="name"
+                                             required>
                                      </div>
                                  </div>
                                  <div class="col-lg-6">
                                      <div class="form-group">
-                                         <label for="name">Email<span>*</span></label>
+                                         <label for="name">{{ $contact->email_label ?? '' }}<span>*</span></label>
                                          <input type="email" class="form_control custom-control"
-                                             placeholder="Enter your email" name="email" required>
+                                             placeholder="{{ $contact->email_placeholder_text ?? '' }}" name="email"
+                                             required>
                                      </div>
                                  </div>
                                  <div class="col-lg-6">
                                      <div class="form-group">
-                                         <label for="name">Phone<span>*</span></label>
+                                         <label for="name">{{ $contact->phone_label ?? '' }}<span>*</span></label>
                                          <input type="text" class="form_control custom-control"
-                                             placeholder="Enter your phone" name="phone" required>
+                                             placeholder="{{ $contact->phone_placeholder_text ?? '' }}" name="phone"
+                                             required>
                                      </div>
                                  </div>
                                  <div class="col-lg-6">
                                      <div class="form-group">
-                                         <label for="name">Subject<span>*</span></label>
+                                         <label for="name">{{ $contact->subject_label ?? '' }}<span>*</span></label>
                                          <input type="text" class="form_control custom-control"
-                                             placeholder="Enter your subject" name="subject" required>
+                                             placeholder="{{ $contact->subject_placeholder_text ?? '' }}" name="subject"
+                                             required>
                                      </div>
                                  </div>
                                  <div class="col-lg-12">
                                      <div class="form-group">
-                                         <label for="name">Message<span>*</span></label>
-                                         <textarea rows="4" class="form_control custom-control" placeholder="Write your message" name="message"
-                                             id=""></textarea>
+                                         <label for="name">{{ $contact->message_label ?? '' }}<span>*</span></label>
+                                         <textarea rows="4" class="form_control custom-control"
+                                             placeholder="{{ $contact->message_placeholder_text ?? '' }}" name="message" id=""></textarea>
                                      </div>
                                  </div>
                                  <div class="col-lg-12">
                                      <div class="form-group">
-                                         <button class="theme-btn style-one">Send Message</button>
+                                         <button class="theme-btn style-one">{{ $contact->button_text ?? '' }}</button>
                                      </div>
                                  </div>
                              </div>

@@ -23,12 +23,12 @@
             <div class="collapse" id="menuComponentsui">
                 <ul class="sub-menu">
                     <li class="menu-item">
-                        <a href="ui-alerts.html" class="menu-link">
+                        <a href="{{ url('backoffice/trainings/create') }}" class="menu-link">
                             <span class="menu-text">Add New Training</span>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="ui-buttons.html" class="menu-link">
+                        <a href="{{ url('backoffice/trainings') }}" class="menu-link">
                             <span class="menu-text">Training List</span>
                         </a>
                     </li>
@@ -46,12 +46,12 @@
             <div class="collapse" id="menuExtendedui">
                 <ul class="sub-menu">
                     <li class="menu-item">
-                        <a href="components-range-slider.html" class="menu-link">
+                        <a href="{{ url('backoffice/inhouses/create') }}" class="menu-link">
                             <span class="menu-text">Add New Inhouse Training</span>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="components-sweet-alert.html" class="menu-link">
+                        <a href="{{ url('backoffice/inhouses') }}" class="menu-link">
                             <span class="menu-text">Inhouse Training List</span>
                         </a>
                     </li>
@@ -76,14 +76,14 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="components-range-slider.html" class="menu-link">
+                        <a href="{{ url('/backoffice/clients') }}" class="menu-link">
                             <span class="menu-text">Clients</span>
                         </a>
                     </li>
 
 
                     <li class="menu-item">
-                        <a href="components-range-slider.html" class="menu-link">
+                        <a href="{{ url('/backoffice/contact') }}" class="menu-link">
                             <span class="menu-text">Contact US</span>
                         </a>
                     </li>

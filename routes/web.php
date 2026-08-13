@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\Backoffice\AboutController;
+use App\Http\Controllers\Backoffice\ClientController;
+use App\Http\Controllers\Backoffice\ContactController;
 use App\Http\Controllers\Backoffice\DashboardController;
 use App\Http\Controllers\Backoffice\InformationController;
+use App\Http\Controllers\Backoffice\InhouseController;
+use App\Http\Controllers\Backoffice\TrainingController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Artisan;
@@ -60,6 +64,14 @@ Route::prefix('backoffice')
 
         Route::resource('/information', InformationController::class);
         Route::resource('/about', AboutController::class);
+        Route::resource('/clients', ClientController::class);
+        Route::put('/clients_update_title', [ClientController::class, 'updateTitle'])->name('clients.update-title');
+
+        Route::resource('/contact', ContactController::class);
+        Route::resource('/inhouses', InhouseController::class);
+        Route::put('/inhouse_update_title', [InhouseController::class, 'updateTitle'])->name('inhouse.update.title');
+
+        Route::resource('/trainings', TrainingController::class);
            
     });
 
