@@ -879,4 +879,1693 @@
         color: #adb5bd;
         opacity: 1;
     }
+
+    
 </style>
+
+
+
+
+@if($view == 'training')
+<style>
+    /* =========================================================
+   MOBILE RESPONSIVE - STEP UP TRAINING
+   ========================================================= */
+
+    /* ---------- TABLET ---------- */
+    @media (max-width: 991.98px) {
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .container,
+        .container-fluid {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Header */
+        .header-top {
+            display: none !important;
+        }
+
+        .header-navigation {
+            min-height: 70px;
+        }
+
+        .header-navigation .nav-inner-menu {
+            min-height: 70px;
+            padding: 0 20px;
+        }
+
+        .custom-logo {
+            height: 65px !important;
+            width: auto !important;
+            margin-top: -5px !important;
+        }
+
+        .header-navigation .site-branding {
+            max-width: 220px !important;
+        }
+
+        /* Main content */
+        .section-padding {
+            padding-top: 65px !important;
+            padding-bottom: 65px !important;
+        }
+
+        /* Hero */
+        .hero-content h1 {
+            font-size: 42px;
+            line-height: 1.15;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Training */
+        .training-card .course-thumbnail img {
+            height: 210px;
+        }
+
+        /* In House */
+        .inhouse-card .post-thumbnail img {
+            height: 210px;
+        }
+
+        .inhouse-card .post-content {
+            padding: 20px;
+        }
+
+        /* Facility */
+        .facility-card {
+            padding: 28px 18px;
+        }
+
+        /* Pricing */
+        .price-card {
+            padding: 28px 22px;
+        }
+
+        .price-card.featured {
+            transform: none;
+        }
+
+        .price-item h2 {
+            font-size: 36px;
+        }
+
+        /* Timeline */
+        .timeline-content {
+            padding: 22px;
+        }
+
+        /* Problem */
+        .problem-card {
+            padding: 28px 20px;
+        }
+
+        .benefit-item {
+            padding: 20px;
+            gap: 15px;
+        }
+
+        /* Accordion */
+        .modern-accordion .accordion-button {
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .accordion-body {
+            padding: 20px;
+        }
+    }
+
+
+    /* =========================================================
+   MOBILE PHONE
+   ========================================================= */
+
+    @media (max-width: 575.98px) {
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+        }
+
+        body {
+            font-size: 14px;
+        }
+
+        /* -----------------------------------------
+       CONTAINER
+       ----------------------------------------- */
+
+        .container,
+        .container-fluid {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        .row {
+            --bs-gutter-x: 20px;
+        }
+
+        /* -----------------------------------------
+       HEADER
+       ----------------------------------------- */
+
+        .header-top {
+            display: none !important;
+        }
+
+        .header-navigation {
+            min-height: 62px;
+        }
+
+        .header-navigation .nav-inner-menu {
+            min-height: 62px;
+            padding: 0 15px;
+        }
+
+        .header-navigation .site-branding {
+            max-width: 180px !important;
+        }
+
+        .custom-logo {
+            height: 55px !important;
+            width: auto !important;
+            margin-top: 0 !important;
+        }
+
+        /*
+       Logo pada menu mobile
+    */
+        .edufit-menu-top .custom-logo {
+            height: 55px !important;
+        }
+
+        /* Menu button */
+        .navbar-toggler,
+        .navbar-toggle,
+        .menu-toggle {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* -----------------------------------------
+       SECTION SPACING
+       ----------------------------------------- */
+
+        section {
+            overflow: hidden;
+        }
+
+        .section-padding,
+        .pt-100,
+        .pb-100 {
+            padding-top: 50px !important;
+            padding-bottom: 50px !important;
+        }
+
+        .pt-120,
+        .pb-120 {
+            padding-top: 55px !important;
+            padding-bottom: 55px !important;
+        }
+
+        /* -----------------------------------------
+       SECTION TITLE
+       ----------------------------------------- */
+
+        .section-title {
+            margin-bottom: 30px !important;
+        }
+
+        .section-title h2,
+        .section-title .title {
+            font-size: 28px !important;
+            line-height: 1.2 !important;
+            margin-bottom: 12px !important;
+        }
+
+        .section-title p {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+        }
+
+        /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
+
+        .hero-area,
+        .hero-section {
+            min-height: auto !important;
+        }
+
+        .hero-content {
+            padding-top: 35px !important;
+            padding-bottom: 35px !important;
+        }
+
+        .hero-content h1 {
+            font-size: 30px !important;
+            line-height: 1.2 !important;
+            margin-bottom: 15px !important;
+        }
+
+        .hero-content h2 {
+            font-size: 25px !important;
+            line-height: 1.25 !important;
+        }
+
+        .hero-content p {
+            font-size: 14px !important;
+            line-height: 1.7 !important;
+            margin-bottom: 18px !important;
+        }
+
+        /* Hero buttons */
+        .hero-content .theme-btn,
+        .hero-content .main-btn,
+        .hero-content a.theme-btn {
+            width: 100%;
+            min-height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px !important;
+            font-size: 14px !important;
+        }
+
+        /* -----------------------------------------
+       HERO TRAINING INFO
+       ----------------------------------------- */
+
+        .hero-training-info {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 8px !important;
+            margin: 18px 0 !important;
+        }
+
+        .hero-training-info .training-info-item {
+            width: 100% !important;
+            min-width: 0 !important;
+            padding: 10px 12px !important;
+            border-radius: 10px !important;
+        }
+
+        .hero-training-info .training-info-icon {
+            flex: 0 0 34px !important;
+            width: 34px !important;
+            height: 34px !important;
+            font-size: 13px !important;
+            border-radius: 8px !important;
+        }
+
+        .hero-training-info .training-info-label {
+            font-size: 10px !important;
+        }
+
+        .hero-training-info .training-info-content strong {
+            font-size: 12px !important;
+            line-height: 1.35 !important;
+        }
+
+        /* -----------------------------------------
+       TRAINING CARD
+       ----------------------------------------- */
+
+        .training-card,
+        .ef-course-grid-item.style-one {
+            border-radius: 14px !important;
+        }
+
+        .training-card .course-thumbnail img {
+            height: 175px !important;
+            min-height: 175px !important;
+            object-fit: cover !important;
+        }
+
+        .training-card .course-info,
+        .ef-course-grid-item.style-one .course-info {
+            padding: 15px !important;
+        }
+
+        .training-card .title {
+            font-size: 17px !important;
+            line-height: 1.35 !important;
+            margin-bottom: 10px !important;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .training-card .course-meta {
+            gap: 4px !important;
+            margin-bottom: 12px !important;
+        }
+
+        .training-card .course-meta-item {
+            gap: 7px !important;
+            padding: 3px 0 !important;
+        }
+
+        .training-card .meta-icon {
+            flex: 0 0 25px !important;
+            width: 25px !important;
+            height: 25px !important;
+            font-size: 12px !important;
+        }
+
+        .training-card .meta-value {
+            font-size: 12px !important;
+            line-height: 1.35 !important;
+            margin-top: 0 !important;
+        }
+
+        .training-card .course-footer {
+            padding-top: 10px !important;
+        }
+
+        .training-card .order-training-btn {
+            min-height: 42px !important;
+            padding: 10px 12px !important;
+            font-size: 12px !important;
+            border-radius: 8px !important;
+        }
+
+        /* -----------------------------------------
+       IN HOUSE TRAINING
+       ----------------------------------------- */
+
+        .inhouse-card {
+            height: auto !important;
+            margin-bottom: 20px;
+            border-radius: 14px !important;
+        }
+
+        .inhouse-card .post-thumbnail img {
+            height: 175px !important;
+        }
+
+        .inhouse-card .post-content {
+            padding: 17px !important;
+        }
+
+        .inhouse-card .title {
+            font-size: 18px !important;
+            line-height: 1.35 !important;
+            margin-bottom: 9px !important;
+        }
+
+        .training-description {
+            min-height: auto !important;
+            margin-bottom: 15px !important;
+            font-size: 13px !important;
+            line-height: 1.65 !important;
+        }
+
+        .training-info {
+            gap: 7px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .training-info span {
+            font-size: 13px !important;
+            line-height: 1.5;
+        }
+
+        .inhouse-footer {
+            padding-top: 14px !important;
+        }
+
+        .inhouse-btn {
+            min-height: 43px;
+            padding: 10px 14px !important;
+            font-size: 13px !important;
+        }
+
+        .inhouse-bottom-cta {
+            margin-top: 15px !important;
+            padding: 22px 18px !important;
+            border-radius: 14px !important;
+        }
+
+        .inhouse-bottom-cta p {
+            font-size: 14px !important;
+            line-height: 1.6;
+        }
+
+        /* -----------------------------------------
+       CLIENT / LOGO CARD
+       ----------------------------------------- */
+
+        .ef-category-item.style-one {
+            padding: 14px !important;
+            border-radius: 14px !important;
+        }
+
+        .client-icon {
+            height: 100px !important;
+            padding: 14px !important;
+            margin-bottom: 10px !important;
+            border-radius: 10px !important;
+        }
+
+        .ef-category-item.style-one .content h5 {
+            font-size: 15px !important;
+        }
+
+        .ef-category-item.style-one .content span {
+            font-size: 12px !important;
+        }
+
+        /* -----------------------------------------
+       FACILITY
+       ----------------------------------------- */
+
+        .facility-card {
+            padding: 23px 15px !important;
+            border-radius: 15px !important;
+        }
+
+        .facility-card .icon {
+            width: 60px !important;
+            height: 60px !important;
+            margin-bottom: 14px !important;
+            font-size: 22px !important;
+        }
+
+        .facility-card h5 {
+            font-size: 16px !important;
+            line-height: 1.35 !important;
+        }
+
+        /* -----------------------------------------
+       BUTTON
+       ----------------------------------------- */
+
+        .theme-btn.style-one {
+            min-height: 44px;
+            padding: 11px 22px !important;
+            font-size: 14px !important;
+        }
+
+        /* -----------------------------------------
+       PRICE CARD
+       ----------------------------------------- */
+
+        .price-card {
+            padding: 25px 18px !important;
+            border-radius: 16px !important;
+            margin-bottom: 20px;
+        }
+
+        .price-card.featured {
+            transform: none !important;
+            border-width: 2px;
+        }
+
+        .recommended {
+            top: -12px !important;
+            padding: 6px 14px !important;
+            font-size: 11px !important;
+            white-space: nowrap;
+        }
+
+        .price-header h4 {
+            font-size: 18px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .price-item h2 {
+            font-size: 32px !important;
+            line-height: 1.1;
+            margin: 12px 0 5px !important;
+        }
+
+        .price-item h3 {
+            font-size: 24px !important;
+        }
+
+        .price-item p {
+            font-size: 13px !important;
+        }
+
+        .price-card hr {
+            margin: 20px 0 !important;
+        }
+
+        .price-card .theme-btn {
+            min-height: 45px;
+            padding: 12px !important;
+            font-size: 14px !important;
+        }
+
+        /* -----------------------------------------
+       TIMELINE
+       ----------------------------------------- */
+
+        .timeline {
+            padding-left: 0 !important;
+        }
+
+        .timeline::before {
+            left: 22px !important;
+            width: 2px !important;
+        }
+
+        .timeline-item {
+            margin-bottom: 22px !important;
+        }
+
+        .timeline-icon {
+            width: 45px !important;
+            height: 45px !important;
+            font-size: 16px !important;
+        }
+
+        .timeline-content {
+            margin-left: 13px !important;
+            padding: 18px !important;
+            border-radius: 14px !important;
+        }
+
+        .day-badge {
+            padding: 5px 12px !important;
+            font-size: 11px !important;
+            margin-bottom: 10px !important;
+        }
+
+        .timeline-content h4 {
+            font-size: 17px !important;
+            line-height: 1.35 !important;
+            margin-bottom: 8px !important;
+        }
+
+        .timeline-content p {
+            font-size: 13px !important;
+            line-height: 1.65 !important;
+        }
+
+        /* -----------------------------------------
+       PROBLEM CARD
+       ----------------------------------------- */
+
+        .problem-card {
+            padding: 24px 17px !important;
+            border-radius: 15px !important;
+            margin-bottom: 15px;
+        }
+
+        .problem-card .icon {
+            width: 62px !important;
+            height: 62px !important;
+            font-size: 25px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .problem-card h5 {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+            margin-bottom: 8px !important;
+        }
+
+        .problem-card p {
+            font-size: 13px !important;
+            line-height: 1.65 !important;
+        }
+
+        /* -----------------------------------------
+       BENEFIT
+       ----------------------------------------- */
+
+        .benefit-item {
+            padding: 17px !important;
+            gap: 13px !important;
+            border-radius: 14px !important;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item i {
+            font-size: 25px !important;
+        }
+
+        .benefit-item h5 {
+            font-size: 15px !important;
+            line-height: 1.4 !important;
+        }
+
+        .benefit-item p {
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+        }
+
+        /* -----------------------------------------
+       ACCORDION
+       ----------------------------------------- */
+
+        .modern-accordion .accordion-item {
+            margin-bottom: 10px !important;
+            border-radius: 13px !important;
+        }
+
+        .modern-accordion .accordion-button {
+            padding: 15px !important;
+            gap: 11px !important;
+            min-height: 65px;
+        }
+
+        .number {
+            width: 40px !important;
+            height: 40px !important;
+            min-width: 40px !important;
+            font-size: 15px !important;
+        }
+
+        .accordion-button h5 {
+            font-size: 14px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 3px !important;
+        }
+
+        .accordion-button small {
+            display: block;
+            font-size: 11px !important;
+            line-height: 1.35 !important;
+        }
+
+        .accordion-body {
+            padding: 15px 17px 20px !important;
+        }
+
+        .course-list li {
+            padding: 10px 0 !important;
+            font-size: 13px !important;
+            line-height: 1.5;
+        }
+
+        /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
+
+        .footer-contact-list li {
+            gap: 10px !important;
+            margin-bottom: 14px !important;
+        }
+
+        .footer-contact-list .contact-icon {
+            flex: 0 0 34px !important;
+            width: 34px !important;
+            height: 34px !important;
+            font-size: 13px !important;
+        }
+
+        .footer-contact-list .contact-info span {
+            font-size: 13px !important;
+        }
+
+        .footer-contact-list .contact-info p {
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+            overflow-wrap: anywhere;
+        }
+
+        /* -----------------------------------------
+       FORM
+       ----------------------------------------- */
+
+        .form-control {
+            min-height: 45px;
+            font-size: 14px !important;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+        }
+
+        /* -----------------------------------------
+       FIX NEGATIVE MARGINS
+       ----------------------------------------- */
+
+        .adjust-margin,
+        .adjust-margin2,
+        .adjust-margin3,
+        .adjust-margin4 {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .adjust-margin2,
+        .adjust-margin4 {
+            padding-top: 0 !important;
+        }
+
+        /* -----------------------------------------
+       IMAGES
+       ----------------------------------------- */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* -----------------------------------------
+       TEXT
+       ----------------------------------------- */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* -----------------------------------------
+       MOBILE TOUCH
+       ----------------------------------------- */
+
+        a,
+        button,
+        .theme-btn {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* -----------------------------------------
+       REMOVE HOVER TRANSFORM ON TOUCH
+       ----------------------------------------- */
+
+        .training-card:hover,
+        .inhouse-card:hover,
+        .price-card:hover,
+        .problem-card:hover,
+        .benefit-item:hover,
+        .facility-card:hover,
+        .timeline-content:hover {
+            transform: none !important;
+        }
+    }
+
+
+    /* =========================================================
+   VERY SMALL PHONE - 360px
+   ========================================================= */
+
+    @media (max-width: 380px) {
+
+        .container,
+        .container-fluid {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+        }
+
+        .custom-logo {
+            height: 50px !important;
+        }
+
+        .hero-content h1 {
+            font-size: 27px !important;
+        }
+
+        .section-title h2,
+        .section-title .title {
+            font-size: 25px !important;
+        }
+
+        .training-card .course-thumbnail img,
+        .inhouse-card .post-thumbnail img {
+            height: 160px !important;
+            min-height: 160px !important;
+        }
+
+        .training-card .title {
+            font-size: 16px !important;
+        }
+
+        .price-card {
+            padding: 22px 15px !important;
+        }
+
+        .price-item h2 {
+            font-size: 29px !important;
+        }
+
+        .timeline-icon {
+            width: 42px !important;
+            height: 42px !important;
+        }
+
+        .timeline::before {
+            left: 20px !important;
+        }
+
+        .timeline-content {
+            margin-left: 10px !important;
+            padding: 15px !important;
+        }
+    }
+</style>
+@endif
+
+@if($view =='dashboard')
+<style>
+
+/* ==========================================================
+   STEP UP TRAINING
+   MOBILE MASTER RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* ======================================================
+       1. GLOBAL
+       ====================================================== */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .container,
+    .container-fluid {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .row {
+        margin-left: -8px !important;
+        margin-right: -8px !important;
+    }
+
+    .row > [class*="col-"] {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+
+    /* ======================================================
+       2. SECTION SPACING
+       ====================================================== */
+
+    section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section-padding,
+    .pt-100,
+    .pb-100 {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+
+    .pt-120,
+    .pb-120 {
+        padding-top: 58px !important;
+        padding-bottom: 58px !important;
+    }
+
+    /* Hilangkan spacing palsu akibat desktop */
+    .adjust-margin,
+    .adjust-margin2,
+    .adjust-margin3,
+    .adjust-margin4 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .adjust-margin2,
+    .adjust-margin4 {
+        padding-top: 0 !important;
+    }
+
+
+    /* ======================================================
+       3. SECTION TITLE
+       ====================================================== */
+
+    .section-title {
+        margin-bottom: 28px !important;
+    }
+
+    .section-title h2,
+    .section-title .title {
+        font-size: 27px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .section-title p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 0 !important;
+    }
+
+
+    /* ======================================================
+       4. HEADER
+       ====================================================== */
+
+    .header-top {
+        display: none !important;
+    }
+
+    .header-navigation {
+        min-height: 64px !important;
+    }
+
+    .header-navigation .nav-inner-menu {
+        min-height: 64px !important;
+        padding: 0 16px !important;
+    }
+
+    .header-navigation .site-branding {
+        max-width: 190px !important;
+    }
+
+    .custom-logo {
+        height: 54px !important;
+        width: auto !important;
+        margin-top: 0 !important;
+    }
+
+    .edufit-menu-top .custom-logo {
+        height: 52px !important;
+    }
+
+
+    /* ======================================================
+       5. HERO
+       ====================================================== */
+
+    .hero-area,
+    .hero-section {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .hero-content {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 30px !important;
+        line-height: 1.18 !important;
+        margin-bottom: 14px !important;
+    }
+
+    .hero-content h2 {
+        font-size: 24px !important;
+        line-height: 1.25 !important;
+    }
+
+    .hero-content p {
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-content .theme-btn,
+    .hero-content .main-btn {
+        width: 100%;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* ======================================================
+       6. HERO TRAINING INFO
+       ====================================================== */
+
+    .hero-training-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin: 18px 0 !important;
+    }
+
+    .hero-training-info .training-info-item {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 10px 12px !important;
+        border-radius: 11px !important;
+    }
+
+    .hero-training-info .training-info-icon {
+        flex: 0 0 35px !important;
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .hero-training-info .training-info-label {
+        font-size: 10px !important;
+    }
+
+    .hero-training-info .training-info-content strong {
+        font-size: 12px !important;
+    }
+
+
+    /* ======================================================
+       7. TRAINING CARD
+       ====================================================== */
+
+    .training-card {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 18px !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+    }
+
+    .training-card .course-thumbnail,
+    .training-card .course-thumbnail a {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .training-card .course-thumbnail img {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: 175px !important;
+        min-height: 175px !important;
+        margin: 0 !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    .training-card .course-info {
+        padding: 16px !important;
+    }
+
+    .training-card .title {
+        font-size: 17px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .training-card .course-meta {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .training-card .course-meta-item {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 3px 0 !important;
+        margin: 0 !important;
+    }
+
+    .training-card .meta-icon {
+        flex: 0 0 26px !important;
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 12px !important;
+    }
+
+    .training-card .meta-content {
+        min-width: 0 !important;
+    }
+
+    .training-card .meta-value {
+        display: block !important;
+        margin: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+    }
+
+    .training-card .course-footer {
+        padding-top: 12px !important;
+    }
+
+    .training-card .order-training-btn {
+        width: 100% !important;
+        min-height: 43px !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+    }
+
+
+    /* ======================================================
+       8. IN HOUSE TRAINING
+       ====================================================== */
+
+    .inhouse-card {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 18px !important;
+        border-radius: 14px !important;
+    }
+
+    .inhouse-card .post-thumbnail {
+        width: 100% !important;
+    }
+
+    .inhouse-card .post-thumbnail img {
+        width: 100% !important;
+        height: 175px !important;
+        display: block !important;
+        object-fit: cover !important;
+    }
+
+    .inhouse-card .post-content {
+        padding: 17px !important;
+    }
+
+    .inhouse-card .title {
+        font-size: 18px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 9px !important;
+    }
+
+    .training-description {
+        min-height: 0 !important;
+        margin-bottom: 14px !important;
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+    .training-info {
+        gap: 6px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .training-info span {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+    .inhouse-footer {
+        padding-top: 13px !important;
+    }
+
+    .inhouse-btn {
+        min-height: 43px !important;
+        font-size: 13px !important;
+    }
+
+    .inhouse-bottom-cta {
+        margin-top: 15px !important;
+        padding: 22px 17px !important;
+        border-radius: 14px !important;
+    }
+
+
+    /* ======================================================
+       9. CLIENT
+       ====================================================== */
+
+    .ef-category-item.style-one {
+        padding: 14px !important;
+        border-radius: 14px !important;
+    }
+
+    .client-icon {
+        height: 95px !important;
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .ef-category-item.style-one .content h5 {
+        font-size: 15px !important;
+    }
+
+    .ef-category-item.style-one .content span {
+        font-size: 12px !important;
+    }
+
+
+    /* ======================================================
+       10. FASILITAS
+       ====================================================== */
+
+    #fasilitas {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+
+    .facility-card {
+        padding: 22px 14px !important;
+        border-radius: 15px !important;
+    }
+
+    .facility-card .icon {
+        width: 58px !important;
+        height: 58px !important;
+        margin-bottom: 13px !important;
+        font-size: 21px !important;
+    }
+
+    .facility-card h5 {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+    }
+
+
+    /* ======================================================
+       11. HARGA
+       ====================================================== */
+
+    #harga {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .price-card {
+        width: 100% !important;
+        padding: 25px 18px !important;
+        margin-bottom: 18px !important;
+        border-radius: 16px !important;
+    }
+
+    .price-card.featured {
+        transform: none !important;
+    }
+
+    .recommended {
+        top: -11px !important;
+        padding: 6px 14px !important;
+        font-size: 10px !important;
+    }
+
+    .price-header h4 {
+        font-size: 18px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .price-item h2 {
+        font-size: 31px !important;
+        line-height: 1.1 !important;
+    }
+
+    .price-item h3 {
+        font-size: 24px !important;
+    }
+
+    .price-card hr {
+        margin: 20px 0 !important;
+    }
+
+    .price-card .theme-btn {
+        min-height: 44px !important;
+        padding: 11px !important;
+    }
+
+
+    /* ======================================================
+       12. OUTLINE / TIMELINE
+       ====================================================== */
+
+    #outline {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .timeline {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .timeline::before {
+        left: 21px !important;
+        width: 2px !important;
+    }
+
+    .timeline-item {
+        margin-bottom: 22px !important;
+    }
+
+    .timeline-icon {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 15px !important;
+    }
+
+    .timeline-content {
+        margin-left: 12px !important;
+        padding: 17px !important;
+        border-radius: 14px !important;
+    }
+
+    .day-badge {
+        padding: 5px 11px !important;
+        font-size: 10px !important;
+        margin-bottom: 9px !important;
+    }
+
+    .timeline-content h4 {
+        font-size: 16px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 7px !important;
+    }
+
+    .timeline-content p {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* ======================================================
+       13. MASALAH / PROBLEM
+       ====================================================== */
+
+    .problem-card {
+        padding: 23px 16px !important;
+        margin-bottom: 16px !important;
+        border-radius: 15px !important;
+    }
+
+    .problem-card .icon {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 24px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .problem-card h5 {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .problem-card p {
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* ======================================================
+       14. BENEFIT
+       ====================================================== */
+
+    .benefit-item {
+        padding: 17px !important;
+        gap: 12px !important;
+        margin-bottom: 14px !important;
+        border-radius: 14px !important;
+    }
+
+    .benefit-item i {
+        font-size: 24px !important;
+        flex-shrink: 0;
+    }
+
+    .benefit-item h5 {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+    }
+
+    .benefit-item p {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* ======================================================
+       15. ACCORDION
+       ====================================================== */
+
+    #belajar-apa {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .modern-accordion .accordion-item {
+        margin-bottom: 9px !important;
+        border-radius: 13px !important;
+    }
+
+    .modern-accordion .accordion-button {
+        min-height: 62px !important;
+        padding: 13px !important;
+        gap: 10px !important;
+    }
+
+    .number {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        font-size: 14px !important;
+    }
+
+    .accordion-button h5 {
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .accordion-button small {
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+    }
+
+    .accordion-body {
+        padding: 14px 16px 18px !important;
+    }
+
+    .course-list li {
+        padding: 9px 0 !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+    }
+
+
+    /* ======================================================
+       16. CONTACT
+       ====================================================== */
+
+    #contact {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    #contact h4 {
+        font-size: 20px !important;
+        line-height: 1.3 !important;
+    }
+
+    .form-control {
+        min-height: 45px !important;
+        font-size: 14px !important;
+        border-radius: 9px !important;
+    }
+
+    textarea.form-control {
+        min-height: 115px !important;
+    }
+
+
+    /* ======================================================
+       17. FOOTER
+       ====================================================== */
+
+    .footer-contact-list li {
+        gap: 10px !important;
+        margin-bottom: 13px !important;
+    }
+
+    .footer-contact-list .contact-icon {
+        flex: 0 0 34px !important;
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 13px !important;
+    }
+
+    .footer-contact-list .contact-info span {
+        font-size: 13px !important;
+    }
+
+    .footer-contact-list .contact-info p {
+        font-size: 12px !important;
+        line-height: 1.55 !important;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ======================================================
+       18. BUTTON GLOBAL
+       ====================================================== */
+
+    .theme-btn.style-one {
+        min-height: 44px !important;
+        padding: 11px 20px !important;
+        font-size: 13px !important;
+    }
+
+
+    /* ======================================================
+       19. REMOVE DESKTOP HOVER EFFECT
+       ====================================================== */
+
+    .training-card:hover,
+    .inhouse-card:hover,
+    .price-card:hover,
+    .facility-card:hover,
+    .problem-card:hover,
+    .benefit-item:hover,
+    .timeline-content:hover {
+        transform: none !important;
+    }
+}
+
+
+/* ==========================================================
+   SMALL PHONE 360px
+   ========================================================== */
+
+@media (max-width: 380px) {
+
+    .container,
+    .container-fluid {
+        padding-left: 13px !important;
+        padding-right: 13px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 27px !important;
+    }
+
+    .section-title h2,
+    .section-title .title {
+        font-size: 25px !important;
+    }
+
+    .training-card .course-thumbnail img,
+    .inhouse-card .post-thumbnail img {
+        height: 160px !important;
+        min-height: 160px !important;
+    }
+
+    .training-card .course-info {
+        padding: 14px !important;
+    }
+
+    .price-card {
+        padding: 22px 15px !important;
+    }
+
+    .price-item h2 {
+        font-size: 28px !important;
+    }
+
+    .timeline-icon {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .timeline::before {
+        left: 20px !important;
+    }
+
+    .timeline-content {
+        margin-left: 9px !important;
+        padding: 15px !important;
+    }
+
+
+    
+}
+
+/* ==========================================================
+   ABOUT SECTION - MOBILE SPACING
+   ========================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* Section About */
+    #about {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+    }
+
+    /* Kolom gambar */
+    #about .about-image,
+    #about .about-thumbnail,
+    #about .about-img {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Image wrapper */
+    #about .image-wrapper,
+    #about .thumbnail,
+    #about .about-image-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Gambar */
+    #about img {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-top: -98px !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Judul About */
+    #about .section-title {
+        margin-bottom: 20px !important;
+    }
+
+    #about .section-title h2,
+    #about h2 {
+        margin-top: 0 !important;
+    }
+}
+
+</style>
+
+@endif
