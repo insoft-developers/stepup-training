@@ -35,10 +35,10 @@
              <li class="dropdown">
                  <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-dark" data-bs-toggle="dropdown"
                      href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                     <img src="{{ asset('template/admin') }}/assets/images/users/avatar-1.jpg" alt="user-image"
+                     <img src="{{ asset('images/step_icon.png') }}" alt="user-image"
                          class="rounded-circle">
                      <span class="ms-1 d-none d-md-inline-block">
-                         Henry <i class="mdi mdi-chevron-down"></i>
+                         {{ Auth::user()->name ?? '' }} <i class="mdi mdi-chevron-down"></i>
                      </span>
                  </a>
 
@@ -49,22 +49,22 @@
                      </div>
 
                      <!-- item-->
-                     <a href="javascript:void(0);" class="dropdown-item notify-item">
+                     {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                          <i data-lucide="user" class="font-size-16 me-2"></i>
                          <span>My Account</span>
-                     </a>
+                     </a> --}}
 
                      <!-- item-->
-                     <a href="javascript:void(0);" class="dropdown-item notify-item">
+                     {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                          <i data-lucide="settings" class="font-size-16 me-2"></i>
                          <span>Settings</span>
-                     </a>
+                     </a> --}}
 
                      <!-- item-->
-                     <a href="pages-lock-screen.html" class="dropdown-item notify-item">
+                     {{-- <a href="pages-lock-screen.html" class="dropdown-item notify-item">
                          <i data-lucide="lock" class="font-size-16 me-2"></i>
                          <span>Lock Screen</span>
-                     </a>
+                     </a> --}}
 
                      <div class="dropdown-divider"></div>
 
@@ -74,7 +74,7 @@
 
 
 
-                         <a href="{{ route('backoffice.logout') }}" class="dropdown-item notify-item">
+                         <a href="javascript:void(0)" class="dropdown-item notify-item">
                              <i data-lucide="log-out" class="font-size-16 me-2"></i>
                              <span
                                  onclick="event.preventDefault();

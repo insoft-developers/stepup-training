@@ -7,7 +7,7 @@
             <a href="{{ url('backoffice') }}" class="menu-link waves-effect">
                 <span class="menu-icon"><i data-lucide="airplay "></i></span>
                 <span class="menu-text"> Dashboards </span>
-                <span class="badge bg-info rounded-pill ms-auto">3</span>
+                
             </a>
         </li>
 
