@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="{{ asset('template') }}/common/css/common_style.css">
     <!--====== Style css ======-->
     <link rel="stylesheet" href="{{ asset('template/pages') }}/assets/css/style.css">
-     <link rel="stylesheet" href="{{ asset('template/home') }}/assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('template/home') }}/assets/css/style.css">
 
     @include('css')
 </head>
@@ -74,7 +74,7 @@
                         <div class="top-left">
                             <span><i class="flaticon-email"></i><a
                                     href="mailto:{{ $data->email }}">{{ $data->email }}</a></span>
-                            <span><i class="flaticon-pin-map"></i>{{ str_replace("<br>", " ", $data->address) }}</span>
+                            <span><i class="flaticon-pin-map"></i>{{ str_replace('<br>', ' ', $data->address) }}</span>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -117,37 +117,36 @@
                                     <li class="menu-item has-children"><a href="{{ url('/') }}">Home</a>
 
                                     </li>
-                                    @if($view == 'training')
-                                     <li class="menu-item has-children"><a href="#manfaat">Benefit</a>
+                                    @if ($view == 'training')
+                                        <li class="menu-item has-children"><a href="#manfaat">Benefit</a>
 
-                                    </li>
-                                     <li class="menu-item has-children"><a href="#belajar-apa">Learn</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#belajar-apa">Learn</a>
 
-                                    </li>
-                                     <li class="menu-item has-children"><a href="#outline">Outline</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#outline">Outline</a>
 
-                                    </li>
-                                     <li class="menu-item has-children"><a href="#harga">Price</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#harga">Price</a>
 
-                                    </li>
-                                     <li class="menu-item has-children"><a href="#fasilitas">Facility</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#fasilitas">Facility</a>
 
-                                    </li>
-
+                                        </li>
                                     @else
-                                    <li class="menu-item has-children"><a href="#about">About</a>
+                                        <li class="menu-item has-children"><a href="#about">About</a>
 
-                                    </li>
-                                    <li class="menu-item has-children"><a href="#training">Training Terdekat</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#training">Training Terdekat</a>
 
-                                    </li>
-                                    <li class="menu-item has-children"><a href="#inhouse">In House Training</a>
+                                        </li>
+                                        <li class="menu-item has-children"><a href="#inhouse">In House Training</a>
 
-                                    </li>
-                                    <li class="menu-item"><a href="#contact">Contact
-                                            Us</a></li>
+                                        </li>
+                                        <li class="menu-item"><a href="#contact">Contact
+                                                Us</a></li>
                                     @endif
-                                    
+
                                 </ul>
                             </nav>
                             <!--=== Edufit Nav Button ===-->
@@ -158,14 +157,12 @@
                         </div>
                         <!--=== Header Nav Right ===-->
                         <div class="nav-right-item">
-                            <div class="search-btn">
-                                <button class="icon" data-bs-toggle="modal" data-bs-target="#search-modal"><i
-                                        class="far fa-search"></i></button>
-                            </div>
+
                             <div class="nav-button d-none d-xl-block">
-                                    
-                                    <a href="#" class="theme-btn style-two">Join Now</a>
-                                </div>
+
+                                <a href="{{ $data->general_cta_link ?? '#' }}"
+                                    class="theme-btn style-two">{{ $data->general_cta_text ?? 'Join Now' }}</a>
+                            </div>
                             <div class="navbar-toggler">
                                 <span></span>
                                 <span></span>
@@ -177,7 +174,7 @@
             </div>
         </div>
     </header><!--====== End Header Area  ======-->
-    
+
     <!--====== Start About Section ======-->
     @yield('content')
     <footer class="footer-default">
@@ -223,13 +220,15 @@
                                     <div class="footer-content">
                                         <h4 class="widget-title">Quick Link</h4>
                                         <ul class="widget-nav">
-                                            <li><a href="{{ url('/') }}">Home</a></li>
-                                            <li><a href="#about">About us</a></li>
-                                            <li><a href="#client">Client</a></li>
-                                            <li><a href="#training">Training</a></li>
-                                            <li><a href="#inhouse">Inhouse</a></li>
+                                            @if ($view == 'dashboard')
+                                                <li><a href="#about">About us</a></li>
+                                                <li><a href="#client">Client</a></li>
+                                                <li><a href="#training">Training</a></li>
+                                                <li><a href="#inhouse">Inhouse</a></li>
+                                            @else
+                                                <li><a href="{{ url('/') }}">Home</a></li>
+                                            @endif
 
-                                            
 
                                         </ul>
                                     </div>
@@ -241,12 +240,13 @@
                                     data-aos-duration="1400">
                                     <div class="footer-content">
                                         <h4 class="widget-title">Training Terdekat</h4>
+                                        @php
+                                            $ft = \App\Models\Training::where('is_active', 1)->orderBy('start_at', 'asc')->limit(5)->get();
+                                        @endphp
                                         <ul class="widget-nav">
-                                            <li><a href="#">Training 1</a></li>
-                                            <li><a href="#">Training 2</a></li>
-                                            <li><a href="#">Training 3</a></li>
-                                            <li><a href="#">Training 4</a></li>
-                                            <li><a href="#">Training 5</a></li>
+                                            @foreach($ft as $key)
+                                            <li><a href="{{ url('/training') }}/{{ $key->slug }}">{{ $key->title }}</a></li>
+                                           @endforeach
                                         </ul>
                                     </div>
                                 </div>

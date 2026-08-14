@@ -25,7 +25,7 @@ class MainController extends Controller
 
         $trainings = Training::where('is_active', 1)
             ->latest()
-            ->get();
+            ->paginate(16);
 
         return view('pages.dashboard', compact('view', 'data', 'about', 'clients', 'contact', 'inhouses', 'trainings'));
     }
@@ -34,6 +34,7 @@ class MainController extends Controller
     {
         $view = 'training';
         $data = Training::where('slug', $slug)->first();
-        return view('pages.training', compact('view', 'data'));
+        $info = Information::first();
+        return view('pages.training', compact('view', 'data', 'info'));
     }
 }

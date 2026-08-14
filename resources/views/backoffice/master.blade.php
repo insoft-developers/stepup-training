@@ -10,14 +10,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-   <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
 
     <link href="{{ asset('template/admin') }}/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
 
     <!-- App css -->
     <link href="{{ asset('template/admin') }}/assets/css/style.min.css" rel="stylesheet" type="text/css">
     <link href="{{ asset('template/admin') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css">
     <script src="{{ asset('template/admin') }}/assets/js/config.js"></script>
+    <style>
+        .form-control::placeholder {
+            color: #adb5bd;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,24 +39,20 @@
             <div class="logo-box">
                 <!-- Brand Logo Light -->
                 <a href="{{ url('backoffice') }}" class="logo-light">
-                    <img src="{{ asset('images/logo_black.png') }}" alt="logo" class="logo-lg"
-                        height="60">
-                    <img src="{{ asset('images/step_icon.png') }}" alt="small logo" class="logo-sm"
-                        height="24">
+                    <img src="{{ asset('images/logo_black.png') }}" alt="logo" class="logo-lg" height="60">
+                    <img src="{{ asset('images/step_icon.png') }}" alt="small logo" class="logo-sm" height="24">
                 </a>
 
                 <!-- Brand Logo Dark -->
                 <a href="{{ url('backoffice') }}" class="logo-dark">
-                   <img src="{{ asset('images/logo_black.png') }}" alt="logo" class="logo-lg"
-                        height="60">
-                    <img src="{{ asset('images/step_icon.png') }}" alt="small logo" class="logo-sm"
-                        height="24">
+                    <img src="{{ asset('images/logo_black.png') }}" alt="logo" class="logo-lg" height="60">
+                    <img src="{{ asset('images/step_icon.png') }}" alt="small logo" class="logo-sm" height="24">
                 </a>
             </div>
 
             <!--- Menu -->
             @include('backoffice.sidebar')
-            
+
         </div>
 
 
@@ -60,14 +64,14 @@
         <div class="page-content">
 
             <!-- ========== Topbar Start ========== -->
-           @include('backoffice.top')
+            @include('backoffice.top')
             <!-- ========== Topbar End ========== -->
 
             <div class="px-3">
 
                 <!-- Start Content-->
                 @yield('content')
-                 <!-- container -->
+                <!-- container -->
 
             </div> <!-- content -->
 
@@ -85,8 +89,10 @@
     <!-- END wrapper -->
 
     <!-- App js -->
+
     <script src="{{ asset('template/admin') }}/assets/js/vendor.min.js"></script>
     <script src="{{ asset('template/admin') }}/assets/js/app.js"></script>
+    
 
     <!-- Jquery Sparkline Chart  -->
     <script src="{{ asset('template/admin') }}/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
@@ -102,6 +108,13 @@
 
     <!-- Dashboard init-->
     <script src="{{ asset('template/admin') }}/assets/js/pages/dashboard.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
+    @stack('scripts')
 
 </body>
 

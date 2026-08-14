@@ -874,4 +874,9 @@
     #contact h4 {
         color: black !important;
     }
+
+    .form-control::placeholder {
+        color: #adb5bd;
+        opacity: 1;
+    }
 </style>

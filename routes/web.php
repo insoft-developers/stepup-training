@@ -4,8 +4,10 @@ use App\Http\Controllers\Backoffice\AboutController;
 use App\Http\Controllers\Backoffice\ClientController;
 use App\Http\Controllers\Backoffice\ContactController;
 use App\Http\Controllers\Backoffice\DashboardController;
+use App\Http\Controllers\Backoffice\FacilityController;
 use App\Http\Controllers\Backoffice\InformationController;
 use App\Http\Controllers\Backoffice\InhouseController;
+use App\Http\Controllers\Backoffice\TestimonyController;
 use App\Http\Controllers\Backoffice\TrainingController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
@@ -72,6 +74,9 @@ Route::prefix('backoffice')
         Route::put('/inhouse_update_title', [InhouseController::class, 'updateTitle'])->name('inhouse.update.title');
 
         Route::resource('/trainings', TrainingController::class);
+
+        Route::resource('/facilities', FacilityController::class);
+        Route::resource('/testimonies', TestimonyController::class);
            
     });
 

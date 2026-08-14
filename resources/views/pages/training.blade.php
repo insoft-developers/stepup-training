@@ -42,12 +42,12 @@
 
 
                                              @if ($data->start_at->isSameDay($data->finish_at))
-                                                     {{ $data->start_at->translatedFormat('d F Y') }}
-                                                 @else
-                                                     {{ $data->start_at->format('d') }}
-                                                     –
-                                                     {{ $data->finish_at->translatedFormat('d F Y') }}
-                                                 @endif
+                                                 {{ $data->start_at->translatedFormat('d F Y') }}
+                                             @else
+                                                 {{ $data->start_at->format('d') }}
+                                                 –
+                                                 {{ $data->finish_at->translatedFormat('d F Y') }}
+                                             @endif
                                          </strong>
                                      </div>
                                  </div>
@@ -71,8 +71,8 @@
                              <div class="hero-subscribe" data-aos="fade-up" data-aos-delay="30" data-aos-duration="1400">
 
                                  <div class="form-group">
-                                     <a href="#registration" class="theme-btn style-one">
-                                         Order Now
+                                     <a href="{{ $info->general_cta_link ?? '#' }}" class="theme-btn style-one">
+                                         {{ $info->general_cta_text ?? '' }}
                                      </a>
                                  </div>
                              </div>
@@ -84,8 +84,8 @@
 
 
                              <!--===  Hero Image  ===-->
-                             <img src="{{ asset('storage') }}/{{ $data->detail_image }}" data-aos="fade-up" data-aos-delay="10"
-                                 data-aos-duration="700" alt="Shape">
+                             <img src="{{ asset('storage') }}/{{ $data->detail_image }}" data-aos="fade-up"
+                                 data-aos-delay="10" data-aos-duration="700" alt="Shape">
                          </div>
                      </div>
                  </div>
@@ -102,119 +102,33 @@
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
                          <span class="sub-heading"></span>
-                         <h2>Meet Our Clients
+                         <h2>{{ $data->client_header_text ?? '' }}
 
                          </h2>
                      </div>
                  </div>
              </div>
              <div class="row justify-content-center">
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_one mb-30" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/arunika_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT.Arunika Digital Nusantara</h5>
-                             <span>Teknologi Digital</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="{{ asset('template') }}/pages/course-grid.html"
-                         class="ef-category-item style-one bg_two mb-30" data-aos="fade-up" data-aos-delay="20"
-                         data-aos-duration="1000">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/cpi_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Cakrawala Prima Industri</h5>
-                             <span>Manufaktur</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_three mb-30" data-aos="fade-up"
-                         data-aos-delay="25" data-aos-duration="1100">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/skm_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Sinergi Karya Mandiri</h5>
-                             <span>Konsultasi Bisnis</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_four mb-30" data-aos="fade-up"
-                         data-aos-delay="30" data-aos-duration="1200">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/lfi_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Lentera Finansial</h5>
-                             <span>Keuangan,Investasi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_five mb-30" data-aos="fade-up"
-                         data-aos-delay="35" data-aos-duration="1300">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/nlu_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Nusa Logistik Utama</h5>
-                             <span>Logistik & Distribusi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_six mb-30" data-aos="fade-up"
-                         data-aos-delay="40" data-aos-duration="1400">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/vistara.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Vista Properti Sejahtera</h5>
-                             <span>Properti, Konstruksi</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_seven mb-30" data-aos="fade-up"
-                         data-aos-delay="45" data-aos-duration="1500">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/bps_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Bumi Pangan Sentosa</h5>
-                             <span>Pangan & Agribisnis</span>
-                         </div>
-                     </a>
-                 </div>
-                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="50"
-                     data-aos-duration="1600">
-                     <!--=== Category Item ===-->
-                     <a href="#" class="ef-category-item style-one bg_eight mb-30">
-                         <div class="client-icon">
-                             <img src="{{ asset('/storage/clients/eli_edit.png') }}">
-                         </div>
-                         <div class="content">
-                             <h5>PT. Elevasi Talenta</h5>
-                             <span>SDM Recruitment</span>
-                         </div>
-                     </a>
-                 </div>
+
+
+                 @foreach ($data->clients as $client)
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                         <!--=== Category Item ===-->
+                         <a href="{{ asset('storage') }}/{{ $client->image }}"
+                             class="ef-category-item style-one {{ $client->color }} mb-30" data-aos="fade-up"
+                             data-aos-delay="15" data-aos-duration="900">
+                             <div class="client-icon">
+                                 <img src="{{ asset('storage') }}/{{ $client->image }}">
+                             </div>
+                             <div class="content">
+                                 <h5>{{ $client->name }}</h5>
+                                 <span>{{ $client->tagline }}</span>
+                             </div>
+                         </a>
+                     </div>
+                 @endforeach
+
+
              </div>
          </div>
      </section><!--====== End Category Section ======-->
@@ -226,11 +140,10 @@
 
              <div class="row justify-content-center mb-5">
                  <div class="col-lg-8 text-center">
-                     <span class="text-primary fw-bold">WHY THIS TRAINING?</span>
-                     <h2>Masalah yang Sering Dihadapi</h2>
+                     <span class="text-primary fw-bold">{{ $data->problem_small_title ?? '' }}</span>
+                     <h2>{{ $data->problem_title ?? '' }}</h2>
                      <p class="text-muted">
-                         Banyak tenaga penjualan memiliki produk yang bagus,
-                         namun kesulitan menghasilkan penjualan yang konsisten.
+                         {{ $data->problem_subtitle ?? '' }}
                      </p>
                  </div>
              </div>
@@ -240,14 +153,13 @@
                  <div class="col-lg-4">
                      <div class="problem-card">
                          <div class="icon">
-                             <i class="fa fa-times-circle"></i>
+                             <i class="{{ $data->problem_item_icon_1 }}"></i>
                          </div>
 
-                         <h5>Sulit Closing</h5>
+                         <h5>{{ $data->problem_item_title_1 }}</h5>
 
                          <p>
-                             Presentasi sudah dilakukan tetapi pelanggan
-                             belum mengambil keputusan.
+                             {{ $data->problem_item_text_1 }}
                          </p>
                      </div>
                  </div>
@@ -255,14 +167,13 @@
                  <div class="col-lg-4">
                      <div class="problem-card">
                          <div class="icon">
-                             <i class="fa fa-comments"></i>
+                             <i class="{{ $data->problem_item_icon_2 }}"></i>
                          </div>
 
-                         <h5>Komunikasi Kurang Efektif</h5>
+                         <h5>{{ $data->problem_item_title_2 }}</h5>
 
                          <p>
-                             Sulit menggali kebutuhan sehingga solusi
-                             yang ditawarkan kurang tepat.
+                             {{ $data->problem_item_text_2 }}
                          </p>
                      </div>
                  </div>
@@ -270,14 +181,13 @@
                  <div class="col-lg-4">
                      <div class="problem-card">
                          <div class="icon">
-                             <i class="fa fa-chart-line"></i>
+                             <i class="{{ $data->problem_item_icon_3 }}"></i>
                          </div>
 
-                         <h5>Target Tidak Tercapai</h5>
+                         <h5>{{ $data->problem_item_title_3 }}</h5>
 
                          <p>
-                             Penjualan stagnan dan performa tim belum
-                             sesuai harapan perusahaan.
+                             {{ $data->problem_item_text_3 }}
                          </p>
                      </div>
                  </div>
@@ -297,16 +207,15 @@
                  <div class="col-lg-8 text-center">
 
                      <span class="text-primary fw-bold">
-                         BENEFIT
+                         {{ $data->benefit_small_title }}
                      </span>
 
                      <h2>
-                         Manfaat Yang Akan Anda Peroleh
+                         {{ $data->benefit_title }}
                      </h2>
 
                      <p class="text-muted">
-                         Setelah mengikuti pelatihan, peserta akan memiliki
-                         kemampuan yang dapat langsung diterapkan.
+                         {{ $data->benefit_subtitle }}
                      </p>
 
                  </div>
@@ -315,85 +224,29 @@
 
              <div class="row g-4">
 
-                 <div class="col-lg-6">
 
-                     <div class="benefit-item">
+                 @foreach ($data->benefits as $key)
+                     <div class="col-lg-6">
 
-                         <i class="fa fa-check-circle"></i>
+                         <div class="benefit-item">
 
-                         <div>
+                             <i class="fa fa-check-circle"></i>
 
-                             <h5>Teknik Closing yang Efektif</h5>
+                             <div>
 
-                             <p>
-                                 Meningkatkan peluang closing melalui pendekatan yang tepat.
-                             </p>
+                                 <h5>{{ $key->item_title }}</h5>
 
-                         </div>
+                                 <p>
+                                     {{ $key->item_text }}
+                                 </p>
 
-                     </div>
-
-                 </div>
-
-                 <div class="col-lg-6">
-
-                     <div class="benefit-item">
-
-                         <i class="fa fa-check-circle"></i>
-
-                         <div>
-
-                             <h5>Komunikasi Lebih Percaya Diri</h5>
-
-                             <p>
-                                 Mampu membangun hubungan dengan calon pelanggan.
-                             </p>
+                             </div>
 
                          </div>
 
                      </div>
+                 @endforeach
 
-                 </div>
-
-                 <div class="col-lg-6">
-
-                     <div class="benefit-item">
-
-                         <i class="fa fa-check-circle"></i>
-
-                         <div>
-
-                             <h5>Meningkatkan Produktivitas Sales</h5>
-
-                             <p>
-                                 Memiliki proses penjualan yang lebih terstruktur.
-                             </p>
-
-                         </div>
-
-                     </div>
-
-                 </div>
-
-                 <div class="col-lg-6">
-
-                     <div class="benefit-item">
-
-                         <i class="fa fa-check-circle"></i>
-
-                         <div>
-
-                             <h5>Siap Diterapkan di Lapangan</h5>
-
-                             <p>
-                                 Materi berbasis studi kasus sehingga mudah dipraktikkan.
-                             </p>
-
-                         </div>
-
-                     </div>
-
-                 </div>
 
              </div>
 
@@ -409,367 +262,156 @@
                      <!--===  Section Title  ===-->
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
-                         <h2>Mengapa How To Be World Class Manager</h2>
+                         <h2>Mengapa {{ $data->title }}</h2>
                      </div>
                  </div>
              </div>
              <div class="row">
                  <div class="col-lg-12">
                      <div class="edufit-content-box">
-                         <h3>Tentang World Class Manager</h3>
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
-
-
-                         <h3>Metodologi Pengajaran</h3>
-                         <br>
-                         <p>Boost your career with Edufit’s globally recognized certifications. Gain practical skills in web
-                             development, digital marketing, UI/UX design, and more through flexible, self-paced learning.
-                             Complete courses, earn your certificate, and showcase your expertise to stand out in today’s
-                             competitive market. Start your journey with Edufit today!</p>
+                         {!! $data->why_paragraph !!}
                      </div>
                  </div>
              </div>
              <div class="row justify-content-center">
-                 <div class="col-xl-3 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
+                 @foreach ($data->reasons as $key)
+                     <div class="col-xl-3 col-md-6 col-sm-12">
+                         <!--===  Iconic Box  ===-->
 
 
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-virtual-event"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Lower Learning Cost</h5>
-                             <p>Affordable education without compromising on quality.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-3 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-virtual-event"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Different Course Variation</h5>
-                             <p>Affordable education without compromising on quality.</p>
+                         <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="10"
+                             data-aos-duration="800">
+                             <div class="shape line_one"><span><img
+                                         src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
+                                         alt="line"></span></div>
+                             <div class="shape line_two"><span><img
+                                         src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
+                                         alt="line"></span></div>
+                             <div class="icon">
+                                 <i class="flaticon-virtual-event"></i>
+                             </div>
+                             <div class="content">
+                                 <h5>{{ $key->item_title }}</h5>
+                                 <p>{{ $key->item_text }}</p>
+                             </div>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-xl-3 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="20"
-                         data-aos-duration="1000">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-virtual-event"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Trusted By Thousands</h5>
-                             <p>Affordable education without compromising on quality.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-3 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="25"
-                         data-aos-duration="1100">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-virtual-event"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Suitable Learning</h5>
-                             <p>Affordable education without compromising on quality.</p>
-                         </div>
-                     </div>
-                 </div>
+                 @endforeach
              </div>
          </div>
      </section><!--====== End Why Choose Section ======-->
 
-    <section id="belajar-apa" class="pt-100 pb-100 bg-light">
+     <section id="belajar-apa" class="pt-100 pb-100 bg-light">
 
-    <div class="container">
+         <div class="container">
 
-        <div class="row justify-content-center mb-5">
+             <div class="row justify-content-center mb-5">
 
-            <div class="col-lg-8 text-center">
+                 <div class="col-lg-8 text-center">
 
-                <span class="text-primary fw-bold">
-                    COURSE CURRICULUM
-                </span>
+                     <span class="text-primary fw-bold">
+                         {{ $data->course_small_title }}
+                     </span>
 
-                <h2 class="mt-2">
-                    Apa yang Akan Anda Pelajari
-                </h2>
+                     <h2 class="mt-2">
+                         {{ $data->course_title }}
+                     </h2>
 
-                <p class="text-muted">
-                    Materi disusun secara sistematis mulai dari membangun mindset,
-                    memahami pelanggan, hingga meningkatkan kemampuan closing.
-                </p>
+                     <p class="text-muted">
+                         {{ $data->course_subtitle }}
+                     </p>
 
-            </div>
+                 </div>
 
-        </div>
+             </div>
 
-        <div class="accordion modern-accordion" id="courseAccordion">
+             <div class="accordion modern-accordion" id="courseAccordion">
 
-            <!-- Item -->
-            <div class="accordion-item">
+                 <!-- Item -->
+                 @foreach ($data->courseItems as $index => $key)
+                     <div class="accordion-item">
 
-                <h2 class="accordion-header">
+                         <h2 class="accordion-header">
 
-                    <button class="accordion-button" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#item1">
+                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                 data-bs-target="#item_{{ $index }}">
 
-                        <span class="number">01</span>
+                                 <span class="number">{{ $index + 1 }}</span>
 
-                        <div>
+                                 <div>
 
-                            <h5>Kualifikasi Prospek</h5>
+                                     <h5>{{ $key->item_title }}</h5>
 
-                            <small>
-                                Menentukan calon pelanggan yang benar-benar potensial.
-                            </small>
+                                     <small>
+                                         {{ $key->item_subtitle }}
+                                     </small>
 
-                        </div>
+                                 </div>
 
-                    </button>
+                             </button>
 
-                </h2>
+                         </h2>
 
-                <div id="item1"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#courseAccordion">
+                         <div id="item_{{ $index }}"
+                             class="accordion-collapse collapse {{ $index == 0 ? 'show' : '' }}"
+                             data-bs-parent="#courseAccordion">
 
-                    <div class="accordion-body">
+                             <div class="accordion-body">
 
-                        <ul class="course-list">
-                            <li>✔ Menentukan target market</li>
-                            <li>✔ Mengenali customer ideal</li>
-                            <li>✔ Teknik qualifying prospect</li>
-                            <li>✔ Prioritas peluang penjualan</li>
-                        </ul>
+                                 {!! $key->item_text !!}
 
-                    </div>
+                             </div>
 
-                </div>
+                         </div>
 
-            </div>
+                     </div>
+                 @endforeach
 
-            <!-- Item -->
-            <div class="accordion-item">
 
-                <h2 class="accordion-header">
+             </div>
 
-                    <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#item2">
+         </div>
 
-                        <span class="number">02</span>
-
-                        <div>
-
-                            <h5>Membangun Hubungan</h5>
-
-                            <small>
-                                Membangun kepercayaan pelanggan.
-                            </small>
-
-                        </div>
-
-                    </button>
-
-                </h2>
-
-                <div id="item2"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#courseAccordion">
-
-                    <div class="accordion-body">
-
-                        <ul class="course-list">
-                            <li>✔ Teknik komunikasi efektif</li>
-                            <li>✔ Active Listening</li>
-                            <li>✔ Membangun trust</li>
-                            <li>✔ Menangani keberatan</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Item -->
-            <div class="accordion-item">
-
-                <h2 class="accordion-header">
-
-                    <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#item3">
-
-                        <span class="number">03</span>
-
-                        <div>
-
-                            <h5>Konversi Penjualan</h5>
-
-                            <small>
-                                Mengubah prospek menjadi pelanggan.
-                            </small>
-
-                        </div>
-
-                    </button>
-
-                </h2>
-
-                <div id="item3"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#courseAccordion">
-
-                    <div class="accordion-body">
-
-                        <ul class="course-list">
-                            <li>✔ Teknik closing</li>
-                            <li>✔ Follow up efektif</li>
-                            <li>✔ Upselling & Cross Selling</li>
-                            <li>✔ Customer Retention</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+     </section>
 
      <section id="outline" class="pt-100 pb-100 bg-white">
          <div class="container">
 
              <div class="row justify-content-center mb-5">
                  <div class="col-lg-8 text-center">
-                     <span class="text-primary fw-bold">TRAINING OUTLINE</span>
-                     <h2>Materi Pelatihan 3 Hari</h2>
+                     <span class="text-primary fw-bold">{{ $data->outline_small_title }}</span>
+                     <h2>{{ $data->outline_title }}</h2>
                      <p class="text-muted">
-                         Kurikulum dirancang secara sistematis agar peserta memahami proses
-                         penjualan dari dasar hingga mampu melakukan closing secara efektif.
+                         {{ $data->outline_subtitle }}
                      </p>
                  </div>
              </div>
 
              <div class="timeline">
+                 @foreach ($data->outlineItems as $index => $key)
+                     <!-- Hari 1 -->
+                     <div class="timeline-item">
 
-                 <!-- Hari 1 -->
-                 <div class="timeline-item">
-
-                     <div class="timeline-icon">
-                         <span>1</span>
-                     </div>
-
-                     <div class="timeline-content">
-
-                         <div class="day-badge">
-                             Hari Pertama
+                         <div class="timeline-icon">
+                             <span>{{ $index + 1 }}</span>
                          </div>
 
-                         <h4>Fundamental Penjualan</h4>
+                         <div class="timeline-content">
 
-                         <p>
-                             Memahami mindset seorang sales profesional, proses penjualan,
-                             komunikasi yang efektif, serta membangun kepercayaan pelanggan.
-                         </p>
+                             <div class="day-badge">
+                                 {{ $key->item_small_title }}
+                             </div>
 
-                     </div>
+                             <h4>{{ $key->item_title }}</h4>
 
-                 </div>
+                             <p>
+                                 {{ $key->item_text }}
+                             </p>
 
-                 <!-- Hari 2 -->
-                 <div class="timeline-item">
-
-                     <div class="timeline-icon">
-                         <span>2</span>
-                     </div>
-
-                     <div class="timeline-content">
-
-                         <div class="day-badge">
-                             Hari Kedua
                          </div>
 
-                         <h4>Kualifikasi & Menggali Kebutuhan</h4>
-
-                         <p>
-                             Teknik menggali kebutuhan pelanggan, memahami pain point,
-                             melakukan presentasi solusi, dan menangani keberatan pelanggan.
-                         </p>
-
                      </div>
-
-                 </div>
-
-                 <!-- Hari 3 -->
-                 <div class="timeline-item">
-
-                     <div class="timeline-icon">
-                         <span>3</span>
-                     </div>
-
-                     <div class="timeline-content">
-
-                         <div class="day-badge">
-                             Hari Ketiga
-                         </div>
-
-                         <h4>Closing & Personal Growth</h4>
-
-                         <p>
-                             Strategi closing yang elegan, teknik follow-up, membangun
-                             hubungan jangka panjang, dan pengembangan mental seorang sales.
-                         </p>
-
-                     </div>
-
-                 </div>
+                 @endforeach
 
              </div>
 
@@ -783,71 +425,35 @@
                      <!--===  Section Title  ===-->
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
-                         <h2>Siapa Saja yang Wajib Ikut</h2>
+                         <h2>{{ $data->wajib_ikut_header_text }}</h2>
                      </div>
                  </div>
              </div>
 
              <div class="row justify-content-center">
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
+                 @foreach ($data->audiences as $key)
+                     <div class="col-xl-4 col-md-6 col-sm-12">
+                         <!--===  Iconic Box  ===-->
 
 
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="10"
-                         data-aos-duration="800">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-avatar"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Direktur</h5>
-                             <p>Affordable education without compromising on quality.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="15"
-                         data-aos-duration="900">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-avatar"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Manajer</h5>
-                             <p>Affordable education without compromising on quality.</p>
+                         <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="10"
+                             data-aos-duration="800">
+                             <div class="shape line_one"><span><img
+                                         src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
+                                         alt="line"></span></div>
+                             <div class="shape line_two"><span><img
+                                         src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
+                                         alt="line"></span></div>
+                             <div class="icon">
+                                 <i class="{{ $key->item_icon }}"></i>
+                             </div>
+                             <div class="content">
+                                 <h5>{{ $key->item_title }}</h5>
+                                 <p>{{ $key->item_text }}</p>
+                             </div>
                          </div>
                      </div>
-                 </div>
-                 <div class="col-xl-4 col-md-6 col-sm-12">
-                     <!--===  Iconic Box  ===-->
-                     <div class="ef-iconic-box style-three mb-40" data-aos="fade-up" data-aos-delay="20"
-                         data-aos-duration="1000">
-                         <div class="shape line_one"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line2.png"
-                                     alt="line"></span></div>
-                         <div class="shape line_two"><span><img
-                                     src="{{ asset('template/home') }}/assets/images/gallery/line3.png"
-                                     alt="line"></span></div>
-                         <div class="icon">
-                             <i class="flaticon-avatar"></i>
-                         </div>
-                         <div class="content">
-                             <h5>Supervisor</h5>
-                             <p>Affordable education without compromising on quality.</p>
-                         </div>
-                     </div>
-                 </div>
+                 @endforeach
 
              </div>
          </div>
@@ -862,99 +468,69 @@
                      <div class="section-title style-one text-center mb-40" data-aos="fade-up" data-aos-delay="10"
                          data-aos-duration="800">
 
-                         <h2>Sudah Ribuan Orang Merasakan Manfaatnya<br><span>Kini Giliranmu</span></h2>
+                         <h2>{!! $data->testi_header_text !!}</h2>
                      </div>
                  </div>
              </div>
              <!--===  Testimonial Slider  ===-->
              <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="15" data-aos-duration="1000">
                  <!--===  Testimonial Item  ===-->
-                 <div class="ef-testimonial-item style-one">
-                     <div class="testimonial-content">
-                         <div class="author-box-rating">
-                             <div class="author-box style-one">
-                                 <div class="author-thumb">
-                                     <img src="{{ asset('storage/trainings') }}/author2.jpg" alt="Author Image">
+                 @foreach ($data->testimonies as $key)
+                     <div class="ef-testimonial-item style-one">
+                         <div class="testimonial-content">
+                             <div class="author-box-rating">
+                                 <div class="author-box style-one">
+                                     <div class="author-thumb">
+                                         <img src="{{ asset('storage') }}/{{ $key->foto }}" alt="Author Image">
+                                     </div>
+                                     <div class="author-info">
+                                         <h5>{{ $key->name }}</h5>
+                                         <span class="position">{{ $key->position }}</span>
+                                     </div>
                                  </div>
-                                 <div class="author-info">
-                                     <h5>David Liam</h5>
-                                     <span class="position">CEO & Founder</span>
-                                 </div>
-                             </div>
-                             <div class="rating">
-                                 <ul class="ratings">
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                 </ul>
-                             </div>
-                         </div>
+                                 @php
+                                     $rating = $key->rating;
+                                     $fullStars = floor($rating);
+                                     $hasHalfStar = $rating - $fullStars >= 0.5;
+                                     $emptyStars = 5 - $fullStars - ($hasHalfStar ? 1 : 0);
+                                 @endphp
 
-                         <p>We value your input and are committed to continuously improving educational offerings. Please
-                             share your thoughts experiences, and suggestions with us. Your feedback helps us enhance our
-                             programs and better serve our learning community.</p>
-                     </div>
-                 </div>
-                 <!--===  Testimonial Item  ===-->
-                 <div class="ef-testimonial-item style-one">
-                     <div class="testimonial-content">
-                         <div class="author-box-rating">
-                             <div class="author-box style-one">
-                                 <div class="author-thumb">
-                                     <img src="{{ asset('storage/trainings') }}/author2.jpg" alt="Author Image">
-                                 </div>
-                                 <div class="author-info">
-                                     <h5>David Liam</h5>
-                                     <span class="position">CEO & Founder</span>
-                                 </div>
-                             </div>
-                             <div class="rating">
-                                 <ul class="ratings">
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                 </ul>
-                             </div>
-                         </div>
+                                 <div class="rating">
 
-                         <p>We value your input and are committed to continuously improving educational offerings. Please
-                             share your thoughts experiences, and suggestions with us. Your feedback helps us enhance our
-                             programs and better serve our learning community.</p>
-                     </div>
-                 </div>
-                 <!--===  Testimonial Item  ===-->
-                 <div class="ef-testimonial-item style-one">
-                     <div class="testimonial-content">
-                         <div class="author-box-rating">
-                             <div class="author-box style-one">
-                                 <div class="author-thumb">
-                                     <img src="{{ asset('storage/trainings') }}/author1.jpg" alt="Author Image">
-                                 </div>
-                                 <div class="author-info">
-                                     <h5>David Liam</h5>
-                                     <span class="position">CEO & Founder</span>
-                                 </div>
-                             </div>
-                             <div class="rating">
-                                 <ul class="ratings">
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                     <li><i class="fas fa-star"></i></li>
-                                 </ul>
-                             </div>
-                         </div>
+                                     <ul class="ratings">
 
-                         <p>We value your input and are committed to continuously improving educational offerings. Please
-                             share your thoughts experiences, and suggestions with us. Your feedback helps us enhance our
-                             programs and better serve our learning community.</p>
+                                         {{-- Full Star --}}
+                                         @for ($i = 0; $i < $fullStars; $i++)
+                                             <li>
+                                                 <i class="fas fa-star"></i>
+                                             </li>
+                                         @endfor
+
+
+                                         {{-- Half Star --}}
+                                         @if ($hasHalfStar)
+                                             <li>
+                                                 <i class="fas fa-star-half-alt"></i>
+                                             </li>
+                                         @endif
+
+
+                                         {{-- Empty Star --}}
+                                         @for ($i = 0; $i < $emptyStars; $i++)
+                                             <li>
+                                                 <i class="far fa-star"></i>
+                                             </li>
+                                         @endfor
+
+                                     </ul>
+
+                                 </div>
+                             </div>
+
+                             <p>{{ $key->comment ?? '' }}</p>
+                         </div>
                      </div>
-                 </div>
+                 @endforeach
              </div>
          </div>
      </section><!--====== End Testimonial Section ======-->
@@ -965,11 +541,10 @@
 
              <div class="row justify-content-center mb-5">
                  <div class="col-lg-8 text-center">
-                     <span class="text-primary fw-bold">INVESTASI TRAINING</span>
-                     <h2 class="mt-2">Pilih Paket Terbaik Anda</h2>
+                     <span class="text-primary fw-bold">{{ $data->price_small_title }}</span>
+                     <h2 class="mt-2">{{ $data->price_title }}</h2>
                      <p class="text-muted">
-                         Semua paket sudah termasuk fasilitas training, seminar kit, sertifikat,
-                         coffee break, dan makan siang.
+                         {{ $data->price_subtitle }}
                      </p>
                  </div>
              </div>
@@ -977,102 +552,41 @@
              <div class="row g-4">
 
                  <!-- Paket Group -->
-                 <div class="col-lg-4">
+                 @php
+                     $count = $data->priceDetails->count();
+                     $ly = 12 / (int) $count;
+                 @endphp
+                 @foreach ($data->priceDetails as $key)
+                     <div class="col-lg-{{ $ly }}">
 
-                     <div class="price-card">
+                         <div class="price-card">
 
-                         <div class="price-header">
-                             <h4>👥 Group (Min. 5 Peserta)</h4>
+                             <div class="price-header">
+                                 <h4>{{ $key->price_category }}</h4>
+                             </div>
+
+                             <div class="price-item">
+                                 <span class="badge-price">EARLY BIRD</span>
+                                 <h2>{{ $key->price_early_bird }}</h2>
+                                 <p>{{ $key->price_text_early_bird }}</p>
+                             </div>
+
+                             <hr>
+
+                             <div class="price-item">
+                                 <span class="badge-price gray">REGULER</span>
+                                 <h3>{{ $key->price_reguler }}</h3>
+                                 <p>{{ $key->price_text_reguler }}</p>
+                             </div>
+
+                             <a href="{{ $info->general_cta_link ?? '#' }}" class="theme-btn style-one w-100 mt-4">
+                                 {{$info->general_cta_text ?? '' }}
+                             </a>
+
                          </div>
-
-                         <div class="price-item">
-                             <span class="badge-price">EARLY BIRD</span>
-                             <h2>Rp4.995.000</h2>
-                             <p>/orang</p>
-                         </div>
-
-                         <hr>
-
-                         <div class="price-item">
-                             <span class="badge-price gray">REGULER</span>
-                             <h3>Rp6.995.000</h3>
-                             <p>/orang</p>
-                         </div>
-
-                         <a href="#" class="theme-btn style-one w-100 mt-4">
-                             Order Sekarang
-                         </a>
 
                      </div>
-
-                 </div>
-
-                 <!-- Individual -->
-                 <div class="col-lg-4">
-
-                     <div class="price-card featured">
-
-                         <div class="recommended">
-                             PALING POPULER
-                         </div>
-
-                         <div class="price-header">
-                             <h4>👤 Individual</h4>
-                         </div>
-
-                         <div class="price-item">
-                             <span class="badge-price">EARLY BIRD</span>
-                             <h2>Rp4.995.000</h2>
-                             <p>/peserta</p>
-                         </div>
-
-                         <hr>
-
-                         <div class="price-item">
-                             <span class="badge-price gray">REGULER</span>
-                             <h3>Rp6.995.000</h3>
-                             <p>/peserta</p>
-                         </div>
-
-                         <a href="#" class="theme-btn style-one w-100 mt-4">
-                             Order Sekarang
-                         </a>
-
-                     </div>
-
-                 </div>
-
-                 <!-- Reseat -->
-                 <div class="col-lg-4">
-
-                     <div class="price-card">
-
-                         <div class="price-header">
-                             <h4>🔄 Reseat</h4>
-                         </div>
-
-                         <div class="price-item">
-                             <span class="badge-price">EARLY BIRD</span>
-                             <h2>Rp4.995.000</h2>
-                             <p>/peserta</p>
-                         </div>
-
-                         <hr>
-
-                         <div class="price-item">
-                             <span class="badge-price gray">REGULER</span>
-                             <h3>Rp6.995.000</h3>
-                             <p>/peserta</p>
-                         </div>
-
-                         <a href="#" class="theme-btn style-one w-100 mt-4">
-                             Order Sekarang
-                         </a>
-
-                     </div>
-
-                 </div>
-
+                 @endforeach
              </div>
 
          </div>
@@ -1084,67 +598,32 @@
              <div class="row justify-content-center">
                  <div class="col-lg-8">
                      <div class="section-title text-center mb-5">
-                         <span class="text-primary fw-bold">WHAT YOU GET</span>
-                         <h2 class="mt-2">Facilities Included</h2>
+                         <span class="text-primary fw-bold">{{ $data->facility_small_title }}</span>
+                         <h2 class="mt-2">{{ $data->facility_title }}</h2>
                          <p class="text-muted">
-                             Every participant will receive the following facilities during the training.
+                             {{ $data->facility_subtitle }}
                          </p>
                      </div>
                  </div>
              </div>
 
              <div class="row g-4 justify-content-center">
-
-                 <div class="col-lg-3 col-md-4 col-sm-6">
-                     <div class="facility-card">
-                         <div class="icon">
-                             <i class="fa fa-handshake"></i>
+                 @foreach ($data->facilities as $key)
+                     <div class="col-lg-3 col-md-4 col-sm-6">
+                         <div class="facility-card">
+                             <div class="icon">
+                                 <i class="{{ $key->icon }}"></i>
+                             </div>
+                             <h5>{{ $key->name }}</h5>
                          </div>
-                         <h5>Program Tatap Muka</h5>
                      </div>
-                 </div>
-
-                 <div class="col-lg-3 col-md-4 col-sm-6">
-                     <div class="facility-card">
-                         <div class="icon">
-                             <i class="fa fa-poll-people"></i>
-                         </div>
-                         <h5>Seminar Kit</h5>
-                     </div>
-                 </div>
-
-                 <div class="col-lg-3 col-md-4 col-sm-6">
-                     <div class="facility-card">
-                         <div class="icon">
-                             <i class="fa fa-file-certificate"></i>
-                         </div>
-                         <h5>Sertifikat</h5>
-                     </div>
-                 </div>
-
-                 <div class="col-lg-3 col-md-4 col-sm-6">
-                     <div class="facility-card">
-                         <div class="icon">
-                             <i class="fa fa-coffee"></i>
-                         </div>
-                         <h5>2x Coffee Break</h5>
-                     </div>
-                 </div>
-
-                 <div class="col-lg-3 col-md-4 col-sm-6">
-                     <div class="facility-card">
-                         <div class="icon">
-                             <i class="fa fa-utensils"></i>
-                         </div>
-                         <h5>Makan Siang</h5>
-                     </div>
-                 </div>
+                 @endforeach
 
              </div>
 
              <div class="text-center mt-5">
-                 <a href="#order" class="theme-btn style-one px-5">
-                     Order Now
+                 <a href="{{ $info->general_cta_link ?? '#' }}" class="theme-btn style-one px-5">
+                     {{ $info->general_cta_text ?? '' }}
                  </a>
              </div>
 

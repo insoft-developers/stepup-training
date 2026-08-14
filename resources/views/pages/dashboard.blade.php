@@ -204,8 +204,8 @@
                                  <div class="course-footer">
                                      <a href="{{ url('/training') }}/{{ $i->slug }}"
                                          class="theme-btn style-one order-training-btn">
-                                         <i class="fas fa-shopping-cart"></i>
-                                         Order
+                                         
+                                         {{ $data->general_cta_text ?? '' }}
                                      </a>
                                  </div>
                              </div>
@@ -215,11 +215,14 @@
              </div>
              <div class="row">
                  <div class="col-lg-12">
-                     <!--===  Course Button  ===-->
-                     <div class="course-button text-center" data-aos="fade-up" data-aos-delay="45"
+
+                     <div class="d-flex justify-content-center mt-4" data-aos="fade-up" data-aos-delay="45"
                          data-aos-duration="1500">
-                         <a href="#" class="theme-btn style-one">Explore More</a>
+
+                         {{ $trainings->links() }}
+
                      </div>
+
                  </div>
              </div>
          </div>

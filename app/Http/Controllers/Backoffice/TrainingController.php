@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Backoffice;
 
 use App\Http\Controllers\Controller;
+use App\Models\Client;
+use App\Models\Facility;
+use App\Models\Testimony;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -17,6 +20,9 @@ class TrainingController extends Controller
         $view = 'training';
         $trainings = Training::latest()->get();
 
+
+
+
         return view(
             'backoffice.pages.trainings.index',
             compact('view', 'trainings')
@@ -29,8 +35,13 @@ class TrainingController extends Controller
      */
     public function create()
     {
+        $clients = Client::orderBy('name')->get();
+
+        $facilities = Facility::orderBy('name')->get();
+        $testimonies = Testimony::latest()->get();
         return view(
-            'backoffice.pages.trainings.create'
+            'backoffice.pages.trainings.create',
+            compact('clients', 'facilities', 'testimonies')
         );
     }
 
@@ -99,6 +110,8 @@ class TrainingController extends Controller
             'facility_subtitle' => 'required|string|max:255',
             'is_active' => 'required|in:0,1',
             'location' => 'required|string|max:255',
+            'testimonies' => 'nullable|array',
+            'testimonies.*' => 'integer|exists:testimonies,id',
 
         ]);
 
@@ -126,9 +139,127 @@ class TrainingController extends Controller
         );
 
 
-        Training::create($validated);
+        $training = Training::create($validated);
+
+        $training->clients()->sync(
+            $request->input('client_ids', [])
+        );
+
+        foreach ($request->input('benefits', []) as $benefit) {
+
+            if (
+                empty($benefit['item_title']) &&
+                empty($benefit['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->benefits()->create([
+                'item_title' => $benefit['item_title'],
+                'item_text' => $benefit['item_text'],
+            ]);
+        }
 
 
+        foreach ($request->input('reasons', []) as $reason) {
+
+            if (
+                empty($reason['item_title']) &&
+                empty($reason['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->reasons()->create([
+                'item_title' => $reason['item_title'],
+                'item_text' => $reason['item_text'],
+            ]);
+        }
+
+        foreach ($request->input('courses', []) as $course) {
+
+            if (
+                empty($course['item_title']) &&
+                empty($course['item_subtitle']) &&
+                empty($course['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->courseItems()->create([
+                'item_title'    => $course['item_title'],
+                'item_subtitle' => $course['item_subtitle'],
+                'item_text'     => $course['item_text'],
+            ]);
+        }
+
+
+
+
+        foreach ($request->input('outlines', []) as $outline) {
+
+            if (
+                empty($outline['item_small_title']) &&
+                empty($outline['item_title']) &&
+                empty($outline['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->outlineItems()->create([
+                'item_small_title' => $outline['item_small_title'],
+                'item_title'       => $outline['item_title'],
+                'item_text'        => $outline['item_text'],
+            ]);
+        }
+
+
+
+        foreach ($request->input('audiences', []) as $audience) {
+
+            if (
+                empty($audience['item_icon']) &&
+                empty($audience['item_title']) &&
+                empty($audience['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->audiences()->create([
+                'item_icon'  => $audience['item_icon'],
+                'item_title' => $audience['item_title'],
+                'item_text'  => $audience['item_text'],
+            ]);
+        }
+
+        foreach ($request->input('prices', []) as $price) {
+
+            if (
+                empty($price['price_category']) &&
+                empty($price['price_early_bird']) &&
+                empty($price['price_reguler'])
+            ) {
+                continue;
+            }
+
+            $training->priceDetails()->create([
+                'price_category'        => $price['price_category'],
+                'price_early_bird'      => $price['price_early_bird'],
+                'price_text_early_bird' => $price['price_text_early_bird'],
+                'price_reguler'         => $price['price_reguler'],
+                'price_text_reguler'    => $price['price_text_reguler'],
+            ]);
+        }
+
+        $training->facilities()->sync(
+            $request->input('facilities', [])
+        );
+
+
+
+        $training->testimonies()->sync(
+            $request->input('testimonies', [])
+        );
         return redirect()
             ->route('backoffice.trainings.index')
             ->with(
@@ -143,9 +274,12 @@ class TrainingController extends Controller
      */
     public function edit(Training $training)
     {
+        $clients = Client::orderBy('name')->get();
+        $facilities = Facility::orderBy('name')->get();
+        $testimonies = Testimony::latest()->get();
         return view(
             'backoffice.pages.trainings.edit',
-            compact('training')
+            compact('training', 'clients', 'facilities', 'testimonies')
         );
     }
 
@@ -217,6 +351,8 @@ class TrainingController extends Controller
             'facility_subtitle' => 'required|string|max:255',
             'is_active' => 'required|in:0,1',
             'location' => 'required|string|max:255',
+            'testimonies' => 'nullable|array',
+            'testimonies.*' => 'integer|exists:testimonies,id',
         ]);
 
 
@@ -277,7 +413,138 @@ class TrainingController extends Controller
         );
 
         $training->update($validated);
+        $training->clients()->sync(
+            $request->input('client_ids', [])
+        );
 
+
+        $training->benefits()->delete();
+
+        foreach ($request->input('benefits', []) as $benefit) {
+
+            if (
+                empty($benefit['item_title']) &&
+                empty($benefit['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->benefits()->create([
+                'item_title' => $benefit['item_title'],
+                'item_text' => $benefit['item_text'],
+            ]);
+        }
+
+
+
+
+        $training->reasons()->delete();
+
+        foreach ($request->input('reasons', []) as $reason) {
+
+            if (
+                empty($reason['item_title']) &&
+                empty($reason['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->reasons()->create([
+                'item_title' => $reason['item_title'],
+                'item_text' => $reason['item_text'],
+            ]);
+        }
+
+        $training->courseItems()->delete();
+
+        foreach ($request->input('courses', []) as $course) {
+
+            if (
+                empty($course['item_title']) &&
+                empty($course['item_subtitle']) &&
+                empty($course['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->courseItems()->create([
+                'item_title'    => $course['item_title'],
+                'item_subtitle' => $course['item_subtitle'],
+                'item_text'     => $course['item_text'],
+            ]);
+        }
+
+        $training->outlineItems()->delete();
+
+        foreach ($request->input('outlines', []) as $outline) {
+
+            if (
+                empty($outline['item_small_title']) &&
+                empty($outline['item_title']) &&
+                empty($outline['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->outlineItems()->create([
+                'item_small_title' => $outline['item_small_title'],
+                'item_title'       => $outline['item_title'],
+                'item_text'        => $outline['item_text'],
+            ]);
+        }
+
+
+
+
+        $training->audiences()->delete();
+
+        foreach ($request->input('audiences', []) as $audience) {
+
+            if (
+                empty($audience['item_icon']) &&
+                empty($audience['item_title']) &&
+                empty($audience['item_text'])
+            ) {
+                continue;
+            }
+
+            $training->audiences()->create([
+                'item_icon'  => $audience['item_icon'],
+                'item_title' => $audience['item_title'],
+                'item_text'  => $audience['item_text'],
+            ]);
+        }
+
+
+        $training->priceDetails()->delete();
+
+        foreach ($request->input('prices', []) as $price) {
+
+            if (
+                empty($price['price_category']) &&
+                empty($price['price_early_bird']) &&
+                empty($price['price_reguler'])
+            ) {
+                continue;
+            }
+
+            $training->priceDetails()->create([
+                'price_category'        => $price['price_category'],
+                'price_early_bird'      => $price['price_early_bird'],
+                'price_text_early_bird' => $price['price_text_early_bird'],
+                'price_reguler'         => $price['price_reguler'],
+                'price_text_reguler'    => $price['price_text_reguler'],
+            ]);
+        }
+
+
+        $training->facilities()->sync(
+            $request->input('facilities', [])
+        );
+
+        $training->testimonies()->sync(
+            $request->input('testimonies', [])
+        );
 
         return redirect()
             ->route('backoffice.trainings.index')
@@ -371,7 +638,7 @@ class TrainingController extends Controller
             storage_path(
                 'app/public/' . $detailPath
             ),
-            quality: 90
+            quality: 99
         );
 
 

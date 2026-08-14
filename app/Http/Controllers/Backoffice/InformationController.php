@@ -70,6 +70,8 @@ class InformationController extends Controller
             'instagram'            => 'nullable|string|max:255',
             'youtube'              => 'nullable|string|max:255',
             'tiktok'               => 'nullable|string|max:255',
+            'general_cta_text'    => 'required',
+            'general_cta_link'    => 'required'
         ]);
 
         $information->update($input);

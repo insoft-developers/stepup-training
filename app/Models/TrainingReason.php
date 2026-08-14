@@ -4,17 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class TrainingReason extends Model
 {
     protected $guarded = ['id'];
 
 
-    public function trainings()
+    public function training()
     {
-        return $this->belongsToMany(
+        return $this->belongsTo(
             Training::class,
-            'training_clients',
-            'client_id',
             'training_id'
         );
     }

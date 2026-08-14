@@ -70,7 +70,7 @@
                                 placeholder="Masukkan alamat lengkap">{{ old('address',$information->address) }}</textarea>
                         </div>
 
-                        <div class="row">
+                        <div class="row mb-3">
                             <div class="col-md-6 mb-3">
                                 <label class="form-label fw-semibold">Email</label>
                                 <input type="email" name="email"
@@ -85,6 +85,25 @@
                                     class="form-control"
                                     value="{{ old('whatsapp',$information->whatsapp) }}"
                                     placeholder="62812xxxxxxx">
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">General CTA Text</label>
+                                <input type="text" name="general_cta_text"
+                                    class="form-control"
+                                    value="{{ old('general_cta_text',$information->general_cta_text) }}"
+                                    placeholder="Join Now, Get Started etc">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold">General CTA Link</label>
+                                <input type="text" name="general_cta_link"
+                                    class="form-control"
+                                    value="{{ old('general_cta_link',$information->general_cta_link) }}"
+                                    placeholder="tuliskan url kemana website akan redirect saat tombol di klik">
                             </div>
                         </div>
 

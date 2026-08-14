@@ -88,6 +88,19 @@
                         </a>
                     </li>
 
+                    <li class="menu-item">
+                        <a href="{{ url('/backoffice/facilities') }}" class="menu-link">
+                            <span class="menu-text">Facility</span>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item">
+                        <a href="{{ url('/backoffice/testimonies') }}" class="menu-link">
+                            <span class="menu-text">Testimony</span>
+                        </a>
+                    </li>
+
 
                 </ul>
             </div>
