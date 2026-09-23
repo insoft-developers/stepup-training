@@ -14,7 +14,7 @@
     <!--====== Title ======-->
     <title>{{ $data->title }}</title>
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/step_fav.png') }}" type="image/png">
     <!--====== Google Fonts ======-->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=SUSE:wght@100..800&display=swap"
         rel="stylesheet">
@@ -45,7 +45,7 @@
     <!--====== Start Preloader ======-->
     <div class="preloader">
         <div class="loader">
-            <img src="{{ asset('images/logo_trans.png') }}" alt="loader">
+            <img src="{{ asset('images/logo_stepup_new.png') }}" alt="loader">
         </div>
     </div><!--====== End Preloader ======-->
     <!--====== Start Overlay ======-->
@@ -97,7 +97,7 @@
                         <!--====  Site Branding  ===-->
                         <div class="site-branding">
                             <a href="{{ url('/') }}" class="brand-logo"><img class="custom-logo"
-                                    src="{{ asset('images/logo_trans.png') }}" alt="Brand Logo"></a>
+                                    src="{{ asset('images/logo_stepup_new.png') }}" alt="Brand Logo"></a>
                         </div>
                         <!--=== Edufit Main Menu ===-->
                         <div class="edufit-nav-menu">
@@ -105,7 +105,7 @@
                             <div class="edufit-menu-top d-flex justify-content-between d-block d-xl-none">
                                 <div class="site-branding">
                                     <a href="{{ url('/') }}" class="brand-logo"><img class="custom-logo"
-                                            src="{{ asset('images/logo_trans.png') }}" alt="Brand Logo"></a>
+                                            src="{{ asset('images/logo_stepup_new.png') }}" alt="Brand Logo"></a>
                                 </div>
                                 <div class="navbar-close">
                                     <i class="far fa-times"></i>
@@ -198,7 +198,7 @@
                             data-aos-duration="1000">
                             <div class="footer-content">
                                 <div class="footer-logo">
-                                    <a href="{{ url('/') }}"><img src="{{ asset('images/logo_black.png') }}"
+                                    <a href="{{ url('/') }}"><img class="bottom-logo" src="{{ asset('images/logo_stepup_new.png') }}"
                                             alt="Brand Logo"></a>
                                 </div>
                                 <p>{{ $data->footer_title }}</p>

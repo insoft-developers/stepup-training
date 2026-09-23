@@ -61,7 +61,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/step_fav.png') }}" type="image/png">
 
     <!-- App css -->
     <link href="{{ asset('/template/admin') }}/assets/css/style.min.css" rel="stylesheet" type="text/css">
@@ -82,7 +82,7 @@
                                     <div class="p-5">
                                         <div class="text-center w-75 mx-auto auth-logo mb-4">
                                             <a href="#" class="logo-dark">
-                                                <span><img src="{{ asset('images/logo_trans.png') }}" alt="" height="82"></span>
+                                                <span><img src="{{ asset('images/logo_stepup_new.png') }}" alt="" height="82"></span>
                                             </a>
 
                                             <a href="#" class="logo-light">

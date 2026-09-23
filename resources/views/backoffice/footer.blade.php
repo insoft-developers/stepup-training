@@ -10,10 +10,11 @@
             </div>
             <div class="col-md-6">
                 <div class="d-none d-md-flex gap-4 align-item-center justify-content-md-end">
-                    <p class="mb-0">Design & Develop by <a href="https://qbsc.cloud/" target="_blank">PT. Indra Insoft
-                            Teknologi</a> </p>
+                    <p class="mb-0">Design & Developed by <a href="https://kampusdreamile.com/" target="_blank">PT. Dreamile International</a> </p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+

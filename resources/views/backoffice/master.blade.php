@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('images/su.ico') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ asset('images/step_fav.png') }}" type="image/png">
 
     <link href="{{ asset('template/admin') }}/assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
 
@@ -25,6 +25,12 @@
             color: #adb5bd;
             opacity: 1;
         }
+
+         .logo-hitam {
+        background: linear-gradient(rgb(255 255 255 / 65%), rgb(126 127 135 / 45%));
+        border-radius: 30px;
+        
+    }
     </style>
 </head>
 
@@ -39,8 +45,8 @@
             <div class="logo-box">
                 <!-- Brand Logo Light -->
                 <a href="{{ url('backoffice') }}" class="logo-light">
-                    <img src="{{ asset('images/logo_black.png') }}" alt="logo" class="logo-lg" height="60">
-                    <img src="{{ asset('images/step_icon.png') }}" alt="small logo" class="logo-sm" height="24">
+                    <img class="logo-hitam" src="{{ asset('images/logo_stepup_new.png') }}" alt="logo" class="logo-lg" height="60">
+                    <img class="logo-hitam" style="display: none;" src="{{ asset('images/logo_stepup_new.png') }}" alt="small logo" class="logo-sm" height="24">
                 </a>
 
                 <!-- Brand Logo Dark -->
